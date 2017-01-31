@@ -1,0 +1,22 @@
+{
+  "name": "talks",
+  "version": "1.0.0",
+  "description": "Slides from my talks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/treshugart/talks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/treshugart/talks/issues"
+  },
+  "homepage": "https://github.com/treshugart/talks#readme",
+  "devDependencies": {
+    "ratpack": "^1.0.6"
+  }
+}
