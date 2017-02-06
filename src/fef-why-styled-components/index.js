@@ -1,4 +1,5 @@
 /* eslint import/no-webpack-loader-syntax: 0 */
+/* @ratpack { jsx: 'h' } */
 
 import 'skatejs-web-components';
 import { Deck, Slide } from '../_';

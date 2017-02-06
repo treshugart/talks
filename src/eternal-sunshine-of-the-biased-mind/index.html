@@ -1,0 +1,168 @@
+<style>
+  body {
+    font-family: Helvetica;
+    margin: 0;
+    padding: 0;
+  }
+</style>
+<sk-deck focused>
+  <sk-slide>
+    # The eternal sunshine of the biased mind
+
+    [Bias](https://en.wikipedia.org/wiki/Bias) is an inclination or outlook to present or hold a partial perspective, often accompanied by a refusal to consider the possible merits of alternative points of view.
+
+    A [Cognitive bias](https://en.wikipedia.org/wiki/Cognitive_bias) is a repeating or basic misstep in thinking, assessing, recollecting, or other cognitive processes.
+
+    < For the sake of this talk, I'm mostly going to focus on [cognitive biases](https://en.wikipedia.org/wiki/List_of_cognitive_biases), how they relate to our every day jobs and how we can mitigate their effects. I will also talk about my experience dealing with my own biases and how it relates to web components, and the struggle web components face, at large, when pitted against the status quo other offerings have set.
+  </sk-slide>
+  <sk-slide>
+    # Our bias
+
+    We see it every day:
+
+    - Tabs vs spaces
+    - OOP vs FRP
+    - Typescript vs Flow
+    - Web Components vs ...
+    - vs vs vs!
+  </sk-slide>
+  <sk-slide>
+    # Our bias
+
+    > We argue because we feel so emotionally committed to our case, but there is no objectively right answer.
+
+    > &mdash; [Sam Koblenski](http://sam-koblenski.blogspot.com.au/2015/04/programming-bias-comes-from-experience.html)
+
+    < Most, if not all of us, have argued for, or against something. Many of us do it with passion. I believe this statement to be, unfortunately, true for many arguments.
+  </sk-slide>
+  <sk-slide>
+    # Our bias
+
+    > We argue because we feel so emotionally committed to our case<strike>, but there is no objectively right answer</strike>.
+
+    > &mdash; [Sam Koblenski](http://sam-koblenski.blogspot.com.au/2015/04/programming-bias-comes-from-experience.html)
+
+    < If we can identify and mitigate our bias, then we will be more effective in making objective decisions.
+  </sk-slide>
+  <sk-slide>
+    # Our bias
+
+    > That thing that the programmer grew to despise may not have been directly responsible for the failure, but it was there and it was noticed.
+
+    > &mdash; [Sam Koblenski](http://sam-koblenski.blogspot.com.au/2015/04/programming-bias-comes-from-experience.html)
+
+    - [illusory correlation](https://en.wikipedia.org/wiki/Illusory_correlation)
+    - [halo effect](https://en.wikipedia.org/wiki/Bias#Halo_effect)
+    - [belief perseverance](https://en.wikipedia.org/wiki/Confirmation_bias#Persistence_of_discredited_beliefs)
+
+    < Our biases come from experience. Some baises are correctly linked and some may be the result of an indirect phenomenon, possibly causing an [illusory correlation](https://en.wikipedia.org/wiki/Illusory_correlation), which is the phenomenon of perceiving a relationship between variables even when no such relationship exists.
+    
+    < Similarly, if you have had a positive experience with something, you're likely to have a positive predisposition toward it. This is called the [halo effect](https://en.wikipedia.org/wiki/Bias#Halo_effect). Negative predispositions are referred to as a [reverse halo effect](https://en.wikipedia.org/wiki/Halo_effect#Reverse-halo_effect), devil effect or horns effect. I'd venture to say this is how many of us land on a favourite framework or library: trial and error through positive and negative experiences.
+
+    < Furthermore, when factual evidence is present to counter an experience, one's beliefs may still persist. This is called [belief perseverance](https://en.wikipedia.org/wiki/Confirmation_bias#Persistence_of_discredited_beliefs). It's worth noting that misinformation can continue to influence inferences one generates even after a correction has been made.
+  </sk-slide>
+  <sk-slide>
+    # Mitigation
+
+    
+  </sk-slide>
+  <sk-slide>
+    # Mitigation: making decisions
+
+    A [decision matrix](https://en.wikipedia.org/wiki/Decision_matrix) is a method to systematically indentify, analyze, and rate the performance of relationships between sets of values and information.
+
+    <img src="https://i.ytimg.com/vi/W7wTDkBPQRw/maxresdefault.jpg" height="400">
+
+    < I'd rate making decisions as generally better than not, but that doesn't mean that making a decision is inherently good. Forward movement is good. Making decisions that hamper progress is bad, unless of course your goal is to inhibit progress.
+
+    < A decision matrix is a good way to help facilitate objective decision making.
+    
+    < A decision matrix can help to keep biases in check, but it's not immune to them.
+
+    < [read definition]
+  </sk-slide>
+  <sk-slide>
+    # My bias
+
+    > Web components are the best; everything else sucks.
+
+    > &mdash; Me in 2015
+
+    ...
+
+    > Web components are great; and so are many other things.
+
+    > &mdash; Me in 2017
+
+    Full disclosure: I'm the author of [SkateJS](https://github.com/skatejs/skatejs).
+
+    < I think it's quite common for us to find something we like and stick with it. Using familiar tools helps make us efficient. That's not to say that if we would make the effort to broaden our experience that it wouldn't help us become more efficient, even if we didn't change our overall toolset.
+
+    < There could be many things that caused me to think that way in the past. One that immediately comes to mind is the [law of the instrument](), or as I've often heard it called: the hammer principle. If all you have is a hammer, everything looks like a nail.
+
+    < Needless to say, I'm a huge fan of web components and probably one of the more noisy web componenteers on Twitter. However, I'm also a huge fan of other offerings. One of the biggest influence of [Skate](https://github.com/skatejs/skatejs) is [React](https://facebook.github.io/react), and more recently [Preact](https://preactjs.com).
+  </sk-slide>
+  <sk-slide>
+    # Recognizing my bias
+
+    - Clean slate. New team, new project.
+    - Reusable components.
+
+    < We were given a clean slate and started a new team to work on a new project. The problem was reusable components.
+
+    < Web components were the perfect fit. After all, this is exactly what they were designed for.
+
+    < We spent a week on a decision matrix between React and Web Components, and then another week on a decision matrix between [Skate](https://github.com/skatejs/skatejs), [Polymer](https://polymer-project.org) and [X-Tags](https://xtags.com).
+  </sk-slide>
+  <sk-slide>
+    # Recognizing my bias
+
+    - Web components > React: framework agnostic, declarative, leverages the platform
+    - Skate > Polymer / X-Tags: FRP, fast, small
+
+    < Obviously, if we were debating web component libraries, web components was the decision of the first matrix. It was perfect on paper: reusable, declarative and framework agnostic components.
+
+    < Skate was also a winner because of it's programming model, performance and size.
+  </sk-slide>
+  <sk-slide>
+    # About me
+
+    Trey Shugart, Principal Dev @ Atlassian, creator of [SkateJS](https://github.com/skatejs/skatejs)
+
+    - Github: https://github.com/treshugart
+    - Twitter: https://twitter.com/treshugart (@treshugart)
+    - Slides created using: https://github.com/skatejs/vert/blob/master/packages/deck
+  </sk-slide>
+
+  <!-- misc slides -->
+  <sk-slide>
+    # References 
+
+    - https://en.wikipedia.org/wiki/Bias
+    - https://en.wikipedia.org/wiki/Cognitive_bias
+    - https://en.wikipedia.org/wiki/List_of_cognitive_biases
+    - https://en.wikipedia.org/wiki/Cognitive_bias_mitigation
+    - https://en.wikipedia.org/wiki/Debiasing
+    - http://sam-koblenski.blogspot.com.au/2015/04/programming-bias-comes-from-experience.html
+    - https://www.topcoder.com/blog/cognitive-biases-in-competitive-programming/
+  </sk-slide>
+  <sk-slide>
+    - [Anchoring](https://en.wikipedia.org/wiki/Anchoring)
+      - Introduced to React before Web Components, thus React becomes the reference point
+    - [Conformation bias](https://en.wikipedia.org/wiki/Confirmation_bias)
+      - Web Components aren't declarative because it has an imperative API, forgetting about HTML
+      - You can also use JSX to write HTML
+    - [Halo (and horns) effect](https://en.wikipedia.org/wiki/Halo_effect)
+      - Horns - web components has been in development for [six years](https://en.wikipedia.org/wiki/Web_Components#History)
+      - Halo - the ergonomics of React could cast it in a positive light for an individual
+    - [Self-serving bias](https://en.wikipedia.org/wiki/Self-serving_bias)
+      - "The DOM is slow" - has since been rebuked (find references)
+    - [Favoritism](https://en.wikipedia.org/wiki/In-group_favoritism)
+      - Members of a community tend to promote others of the same community
+      - The more favoured one is, the more likely they are to have influence
+    - [Lookism](https://en.wikipedia.org/wiki/Lookism)
+      - Generally referred to in the context of social constructs, but can be applied to the "look" of code
+      - Disliking something because it uses JSX
+      - Disliking something because it doesn't abstract the DOM
+  </sk-slide>
+</sk-deck>

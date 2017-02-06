@@ -1,7 +1,9 @@
-# talks
+# Talks
 
-Slides from my talks.
+Slides from some of my talks.
 
 ## Running
 
-To run locally, run: `ratpack [talk]/index.js`.
+I use `ratpack` or local dev stuff. You can install it using `npm install -g ratpack`.
+
+One installed, simply run `ratpack src/[talk]/index.js`.
