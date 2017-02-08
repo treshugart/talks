@@ -4,18 +4,63 @@
     margin: 0;
     padding: 0;
   }
+  vert-deck {
+    height: 100vh;
+    width: 100vw;
+  }
+  vert-slide {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 40px 20px 20px;
+  }
 </style>
-<sk-deck focused>
-  <sk-slide>
+<vert-deck focused>
+  <vert-slide>
     # The eternal sunshine of the biased mind
 
     [Bias](https://en.wikipedia.org/wiki/Bias) is an inclination or outlook to present or hold a partial perspective, often accompanied by a refusal to consider the possible merits of alternative points of view.
 
     A [Cognitive bias](https://en.wikipedia.org/wiki/Cognitive_bias) is a repeating or basic misstep in thinking, assessing, recollecting, or other cognitive processes.
 
-    < For the sake of this talk, I'm mostly going to focus on [cognitive biases](https://en.wikipedia.org/wiki/List_of_cognitive_biases), how they relate to our every day jobs and how we can mitigate their effects. I will also talk about my experience dealing with my own biases and how it relates to web components, and the struggle web components face, at large, when pitted against the status quo other offerings have set.
-  </sk-slide>
-  <sk-slide>
+    < Hi, I'm' Trey and I'm here to talk to you about bias. I'm by no means an export in the field but curious about psychology and how it relates to our industry.
+
+    < For the sake of this talk, I'm mostly going to focus on a subset of [cognitive biases](https://en.wikipedia.org/wiki/List_of_cognitive_biases). I'll attempt to relate them our every day jobs and touch on how we can try to mitigate their effects. I will also talk about my experience dealing with my own biases and how it relates to web components, and the struggle web components face, at large, when pitted against the status quo other offerings have set.
+
+    < To start off, let's define "bias".
+    
+    < *read definition of bias*
+
+    < And more specifically...
+
+    < *read definition of cognitive bias*
+  </vert-slide>
+  <vert-slide>
+    # Bias
+
+    Helps with many forms of every day life:
+
+    - Crossing the street
+    - Skimming a blog post
+    - What to eat for dinner
+
+    < We see bias every day: at the grocery store, on TV and in politics. And, oh boy, do we see it in politics! But I'm not going to get into that.
+
+    < Bias is what keeps us from getting run over when we cross the street. It fills in the blanks when we're skimming through a lengthy blog post and don't have time to read every sentence. It even gets us fed.
+  </vert-slide>
+  <vert-slide>
+    # Bias
+
+    But can also hinder:
+
+    - Could actually get you hit by a car you didn't see
+    - Missing key points in that blog post you skimmed
+    - Getting food poisoning because you forgot to check an expiry date
+
+    < Though biases may offer shortcuts in making quick decisions, they're innacurate by definition, and can lead to undesirable outcomes. For example, you may have not seen a car out of the corner of your eye as you bolted across the street. There may have been key points in that blog post that was imperative in making a recent decision on your tech stack. You may have gotten food poisining because you missed the expiry date on the chicken wings you ate last night.
+
+    < You will never be able to completely remove bias. There's no way you're going to be able to calculate, with 100% accuracy, that crossing the road is safe, though, you might come close. Even if there's no cars, you could trip on a rock in the middle of the road, get knocked out cold and a distracted driver could still run you over. It's unlikely, but still possible.
+  </vert-slide>
+  <vert-slide>
     # Our bias
 
     We see it every day:
@@ -25,26 +70,36 @@
     - Typescript vs Flow
     - Web Components vs ...
     - vs vs vs!
-  </sk-slide>
-  <sk-slide>
+
+    < We also see it everyday in our industry.
+
+    < *read out list and on the last one...*
+
+    < It seems like everything is constantly at odds with each other. It's not always that way, but we love our opinions and along with opinions, comes truckloads of bias.
+  </vert-slide>
+  <vert-slide>
     # Our bias
 
     > We argue because we feel so emotionally committed to our case, but there is no objectively right answer.
 
     > &mdash; [Sam Koblenski](http://sam-koblenski.blogspot.com.au/2015/04/programming-bias-comes-from-experience.html)
 
-    < Most, if not all of us, have argued for, or against something. Many of us do it with passion. I believe this statement to be, unfortunately, true for many arguments.
-  </sk-slide>
-  <sk-slide>
+    < I was reading this article the other day written by a programmer named Sam Koblenski. A couple excerpts from early on in his post caught my eye.
+
+    < *read quote*
+
+    < Most, if not all of us, have argued for, or against something. Many of us do it with passion. I believe this statement to - unfortunately - be true for many arguments.
+  </vert-slide>
+  <vert-slide>
     # Our bias
 
     > We argue because we feel so emotionally committed to our case<strike>, but there is no objectively right answer</strike>.
 
     > &mdash; [Sam Koblenski](http://sam-koblenski.blogspot.com.au/2015/04/programming-bias-comes-from-experience.html)
 
-    < If we can identify and mitigate our bias, then we will be more effective in making objective decisions.
-  </sk-slide>
-  <sk-slide>
+    < However, if we can identify and mitigate our bias, then we will be more effective in making objective decisions.
+  </vert-slide>
+  <vert-slide>
     # Our bias
 
     > That thing that the programmer grew to despise may not have been directly responsible for the failure, but it was there and it was noticed.
@@ -55,76 +110,180 @@
     - [halo effect](https://en.wikipedia.org/wiki/Bias#Halo_effect)
     - [belief perseverance](https://en.wikipedia.org/wiki/Confirmation_bias#Persistence_of_discredited_beliefs)
 
-    < Our biases come from experience. Some baises are correctly linked and some may be the result of an indirect phenomenon, possibly causing an [illusory correlation](https://en.wikipedia.org/wiki/Illusory_correlation), which is the phenomenon of perceiving a relationship between variables even when no such relationship exists.
+    < Another quote also caught my eye.
+
+    < *read quote*
+
+    < Our biases come from experience. Some baises are correctly linked and some may be the result of an indirect phenomenon, possibly causing an [illusory correlation](https://en.wikipedia.org/wiki/Illusory_correlation), which is when a relationship between variables is perceived, but doesn't actually exist.
+
+    < This quote describes a developer who had a negative experience with something. Negative predispositions form a negative experience are referred to as a [reverse halo effect](https://en.wikipedia.org/wiki/Halo_effect#Reverse-halo_effect), devil effect or horns effect.
     
-    < Similarly, if you have had a positive experience with something, you're likely to have a positive predisposition toward it. This is called the [halo effect](https://en.wikipedia.org/wiki/Bias#Halo_effect). Negative predispositions are referred to as a [reverse halo effect](https://en.wikipedia.org/wiki/Halo_effect#Reverse-halo_effect), devil effect or horns effect. I'd venture to say this is how many of us land on a favourite framework or library: trial and error through positive and negative experiences.
+    < If you have a positive experience with something, you're likely to have a positive predisposition toward it. This is called the [halo effect](https://en.wikipedia.org/wiki/Bias#Halo_effect).
+
+    < I'd venture to say this is how many of us land on a favourite framework or library: trial and error through positive and negative experiences.
 
     < Furthermore, when factual evidence is present to counter an experience, one's beliefs may still persist. This is called [belief perseverance](https://en.wikipedia.org/wiki/Confirmation_bias#Persistence_of_discredited_beliefs). It's worth noting that misinformation can continue to influence inferences one generates even after a correction has been made.
-  </sk-slide>
-  <sk-slide>
-    # Mitigation
+  </vert-slide>
+  <vert-slide>
+    # Bias blind spot
 
+    - Recognise bias in others
+    - Failure to recognise your own
+
+    < It's difficult to recognise one's own bias, even if it's easy for you to recognise it in other people. There's actually a name for this. It's called the [bias blind spot](https://en.wikipedia.org/wiki/Bias_blind_spot). It's defined as the ability to recognise the biases of other people while failing to recognise your own.
+
+    < I've always been interested in psychology and I did quite a bit of studying in preparation for this talk. The research got me very excited and I was constantly trying to pinpoint biases in other arguments... right up until I read this definition. It made me take a step back and try to realise that calling out other biases is not how you make a discussion objective.
     
-  </sk-slide>
-  <sk-slide>
-    # Mitigation: making decisions
+    < When learning about bias, for any purpose, this might be one of the more important forms to know about.
+  </vert-slide>
+  <vert-slide>
+    # Our bias
+
+    ## Nobody is safe!
+
+    < The thing about bias is that nobody is immune to it. Your dog, you, your boss and that thought-leader you idolise are all subject to its clutches. Even the most objective people, who are extremely well-versed in a subject, can suffer from a cognitive bias called the [curse of knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge). This occurs when an individual, communicating with others, unknowingly assumes that the others have the background to understand.
+  </vert-slide>
+  <vert-slide>
+    # WTF
+
+    - Our story in using web components
+    - Recent twitter wars
+    - How can we be better
+
+    < At this point, you might be asking what the heck this has to do with web components. That's a very good question, and it's one that I'm going to spend the rest of the talk addressing within the context of the first half.
+
+    < I'm first going to talk about our story of using web components at Atlassian and the eventual outcome.
+
+    < Then I'll go on to address a recent thread on Twitter between both the Web Component and React communities as I feel there was a lot of bias from both sides that could have been mitigated.
+
+    < Lastly, I'll try and make a few recommendations that we can all follow to be better people both in our programming communities and in the world.
+  </vert-slide>
+  <vert-slide>
+    # My bias
+
+    - &hearts;'s web components to the max
+    - Uber vocal WC community member
+    - Author of [SkateJS](https://github.com/skatejs/skatejs)
+    - Uses React every day and also &hearts;'s it, but still prefers web components
+
+    < This is probably a good time in the talk to reveal some of my biases, as it will help set the stage for the rest of the talk.
+
+    < I totally dig web components. It's nice to see an essential piece of the platform finally come to fruition.
+
+    < I'm also a very vocal member in the web component community and occasionally the W3C issues. I definitely spout subjectivity on a regular basis but it doesn't mean that I don't try to be objective!
+
+    < I'm the author of SkateJS. For those of you who don't know what it that is, it's similar to React but built on top of Web Components. I urge you to check it out if you haven't already.
+
+    < I also use React on a daily basis and really enjoy it. It's a great tool, and I've obtained an invaluable amount of knowledge from using it. That said, I still have my reasons for preferring web components as a platform, which I won't cover in this talk.
+
+    < I think it's quite common for us to find something we like and stick with it. Using familiar tools helps make us efficient. That's not to say that if we would make the effort to broaden our experience that it wouldn't help us become better programmers, even if the result is that we stick with the same tools.
+  </vert-slide>
+  <vert-slide>
+    # Web Components at Atlassian
+
+    - We were scratching the surface for awhile
+    - New project, clean slate
+    - Goal: cross product components
+
+    < I had originally written Skate in the early days of the web component spec, toward the beginning of 2014. It was in response to some spikes we were doing to try and find a better architecture to start moving our components to. Skate now to Skate in 2014 is black and white; worlds apart. While Skate did make progress, we didn't make much forward progress in fully embracing web components or evangelising it.
+
+    < I've tried to figure out why we never did but it's hard to pinpoint what caused it. I often thing it was due to [analysis paralysis](https://en.wikipedia.org/wiki/Analysis_paralysis) due to the sheer amount of problems we had to solve, situations we had to account for and number of stakeholders the project had. The instability of the spec, lack of browser support, and the size and performance issues that plagued the v0 polyfills, I also think had a lot to do with it.
+
+    < All of the sudden, we were given a clean slate to work on a new project, similar to our old project and to put our old project into maintenance mode. The goal was to build UI components to share across our product range with an emphasis on dev speed.
+
+    < Along side this, React had been picking up a lot of steam internally. Most products were starting to use it in some way, shape or form. In parallel, Web Components were reaching spec stability and browsers began implementing the most important parts: custom elements and shadow DOM.
+  </vert-slide>
+  <vert-slide>
+    # Web Components at Atlassian
+
+    - Perfect time to move on Web Components
+    - Cross-product, cross-framework
+    - Leverages the platform
+    - Skate is tiiiny (though polyfills are large, they are eventually removed)
+    - No React version coupling
+
+    < It was a pivotal point for us because we could push web components without being held back by our legacy product. It made a lot of sense due to spec stability and browser adoption.
+
+    < On top of that we not only cross-product, but also cross-framework compatibility. This was particularly important to our team because we wanted for anyone to be able to consume our components, not just the parts written in React. It was either that or force other parts to be built in React. That's not a bad thing, but possibly not the best use of time.
+
+    < Being able to leverage the platform means several things. You get specs, native performance and all that built-in behaviour that you don't have to send down the wire to the user.
+
+    < Another big thing for us was not having to move at the speed of the slowest product. Meaning, we'd probably end up having to support the lowest React version in our products while trying to maintian compatibility - or alinging versions - with other products.
+  </vert-slide>
+  <vert-slide>
+    # Web Components at Atlassian
 
     A [decision matrix](https://en.wikipedia.org/wiki/Decision_matrix) is a method to systematically indentify, analyze, and rate the performance of relationships between sets of values and information.
 
     <img src="https://i.ytimg.com/vi/W7wTDkBPQRw/maxresdefault.jpg" height="400">
 
-    < I'd rate making decisions as generally better than not, but that doesn't mean that making a decision is inherently good. Forward movement is good. Making decisions that hamper progress is bad, unless of course your goal is to inhibit progress.
+    < Web Components seemed perfect on paper, but we had to justify why we thought they were the best choice for us.
 
-    < A decision matrix is a good way to help facilitate objective decision making.
-    
-    < A decision matrix can help to keep biases in check, but it's not immune to them.
+    < We used a decision matrix to do this.
 
-    < [read definition]
-  </sk-slide>
-  <sk-slide>
-    # My bias
+    < *read definition and go over the matrix*
 
-    > Web components are the best; everything else sucks.
+    < We ended up doing a decision matrix for React vs Web Components, and then another one for SkateJS vs Polymer vs X-Tags. The winner was both Web Components and Skate.
 
-    > &mdash; Me in 2015
+    < It's here that you might be thinking, "Aren't you biased towards both of those?'"
 
-    ...
+    < Indeed I am. However, I was also the one who had the deepest knowledge of Web Components and the supporting libraries. Other people involved in the decision making process helped keep my bias in check by fact-checking information and asking tough questions.
+  </vert-slide>
+  <vert-slide>
+    # Web Components at Atlassian
 
-    > Web components are great; and so are many other things.
+    Six months later:
 
-    > &mdash; Me in 2017
+    - Some friction in getting Skate to 1.0
+    - Last minute spec changes cause more major releases
+    - Minor investment, that went mostly as planned
 
-    Full disclosure: I'm the author of [SkateJS](https://github.com/skatejs/skatejs).
+    < Fast-forward a few months. We've built out around 40 web components all written with Skate. There was some learning barriers, but since Skate is a lot like React, it was easier to pick up for devs familiar with React than it would be with something else.
 
-    < I think it's quite common for us to find something we like and stick with it. Using familiar tools helps make us efficient. That's not to say that if we would make the effort to broaden our experience that it wouldn't help us become more efficient, even if we didn't change our overall toolset.
+    < This was pre Skate 1.0 and we had anticipated some friction getting it to 1.0 and for it to slow down sometime shortly after that. This part went mostly as expected. There was quite a bit of effort on my part in getting 1.0 across the line and a bit of effort from myself and a couple of other devs bringing it past that.
 
-    < There could be many things that caused me to think that way in the past. One that immediately comes to mind is the [law of the instrument](), or as I've often heard it called: the hammer principle. If all you have is a hammer, everything looks like a nail.
+    < It went from 1.0 to 3.0 fairly quickly as there was some unanticipated changes in the specs and we decided that it'd be best to convey those changes through our versions, even though they might be unlikely to affect a consumer.
+  </vert-slide>
+  <vert-slide>
+    # Web Components at Atlassian
 
-    < Needless to say, I'm a huge fan of web components and probably one of the more noisy web componenteers on Twitter. However, I'm also a huge fan of other offerings. One of the biggest influence of [Skate](https://github.com/skatejs/skatejs) is [React](https://facebook.github.io/react), and more recently [Preact](https://preactjs.com).
-  </sk-slide>
-  <sk-slide>
-    # Recognizing my bias
+    We didn't anticipate some things:
 
-    - Clean slate. New team, new project.
-    - Reusable components.
+    - Still maintaining our own Shadow DOM polyfill
+    - Polyfills unstable for longer than expected
+    - Minor bugs when native custom elements released
+    - Safari releasing a broken Shadow DOM implementation
 
-    < We were given a clean slate and started a new team to work on a new project. The problem was reusable components.
+    < I want to start off by saying that I'm not trying to call anyone out. Browser and polyfill vendors are doing an amazing job at what they do, and I truly appreciate their contributions.
 
-    < Web components were the perfect fit. After all, this is exactly what they were designed for.
+    < One big issue we were still facing is bugs in our own Shadow DOM polyfill. We had almost a thousand tests that were all passing but when you dropped them into a huge product with a lot of imperative DOM code, parts still broke.
 
-    < We spent a week on a decision matrix between React and Web Components, and then another week on a decision matrix between [Skate](https://github.com/skatejs/skatejs), [Polymer](https://polymer-project.org) and [X-Tags](https://xtags.com).
-  </sk-slide>
-  <sk-slide>
-    # Recognizing my bias
+    < We spent some time trying to fix these and decided that we'd try the official polyfills. It turns out they didn't improve the situation much, but were moving quicker than we could maintain ours, so we decided to use them instead.
 
-    - Web components > React: framework agnostic, declarative, leverages the platform
-    - Skate > Polymer / X-Tags: FRP, fast, small
+    < Native custom elements posed a couple of trivial bugs with Skate but nothing major. We fixed them and moved on.
 
-    < Obviously, if we were debating web component libraries, web components was the decision of the first matrix. It was perfect on paper: reusable, declarative and framework agnostic components.
+    < The biggest issue that we had was when Safari released their v1 Shadow DOM implementation. Our world broke. We had content, but it looked like someone threw in a CSS reset with Times New Roman as the base font. We were doing everything correctly and using style tags in the shadow root, so what could be going wrong?
 
-    < Skate was also a winner because of it's programming model, performance and size.
-  </sk-slide>
-  <sk-slide>
+    < After a bit of debugging, it turned out that if you created and set the content of a style tag imperatively that the styles wouldn't recalc. This isn't an issue if you innerHTML the template to your shadow root, but we were using Incremental DOM - a virtual DOM library - to render our templates to our components and underneath the hood it uses the imperative API.
+
+    < I want to emphasise the fact that an issue was found, and raised, while Safari was still in tech preview and it was still released to stable without a fix in sight until the next update to Mac OS. We were floored; completely helpless. This was the straw.
+
+    < What would have happend, if in another six months down the road, we were flying along in production and Firefox did the same thing. Even though it's a bug in Firefox, the customer is going to come knocking down our door, not Mozilla's. We had to pull the plug.
+
+    < I was beside myself. I had poured my heart and soul into Skate and Web Components, and there was a lot of time invested by other people, but it just wasn't enough. There was nothing we could do. I had to look at this more objectively.
+  </vert-slide>
+  <vert-slide>
+    # Web Components at Atlassian
+
+    Was the original matrix accurate?
+
+    - [Framing]()
+
+    < Was the outcome of the initial decision matrix framed in a way to make web components look like a better fit than they actually were? And was Skate also made to look better than it is?
+
+    < 
+  </vert-slide>
+  <vert-slide>
     # About me
 
     Trey Shugart, Principal Dev @ Atlassian, creator of [SkateJS](https://github.com/skatejs/skatejs)
@@ -132,21 +291,25 @@
     - Github: https://github.com/treshugart
     - Twitter: https://twitter.com/treshugart (@treshugart)
     - Slides created using: https://github.com/skatejs/vert/blob/master/packages/deck
-  </sk-slide>
+  </vert-slide>
 
   <!-- misc slides -->
-  <sk-slide>
+  <vert-slide>
     # References 
 
     - https://en.wikipedia.org/wiki/Bias
     - https://en.wikipedia.org/wiki/Cognitive_bias
     - https://en.wikipedia.org/wiki/List_of_cognitive_biases
+    - https://en.wikipedia.org/wiki/Decision-making#Cognitive_and_personal_biases
     - https://en.wikipedia.org/wiki/Cognitive_bias_mitigation
     - https://en.wikipedia.org/wiki/Debiasing
     - http://sam-koblenski.blogspot.com.au/2015/04/programming-bias-comes-from-experience.html
-    - https://www.topcoder.com/blog/cognitive-biases-in-competitive-programming/
-  </sk-slide>
-  <sk-slide>
+    - https://blog.bufferapp.com/social-biases-good-decisions
+    - http://staltz.com/react-could-love-web-components.html
+    - https://twitter.com/tomdale/status/769186852079300608
+    - https://briankardell.wordpress.com/2016/09/06/potentially-scattered-thoughts-on-web-components-and-frameworks/
+  </vert-slide>
+  <vert-slide>
     - [Anchoring](https://en.wikipedia.org/wiki/Anchoring)
       - Introduced to React before Web Components, thus React becomes the reference point
     - [Conformation bias](https://en.wikipedia.org/wiki/Confirmation_bias)
@@ -164,5 +327,5 @@
       - Generally referred to in the context of social constructs, but can be applied to the "look" of code
       - Disliking something because it uses JSX
       - Disliking something because it doesn't abstract the DOM
-  </sk-slide>
-</sk-deck>
+  </vert-slide>
+</vert-deck>
