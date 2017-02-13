@@ -418,7 +418,6 @@
         - Integrating CSS frameworks
         - Handling changes to children
         - When to use shadow DOM, when not to
-        - Server-side rendering
 
         < I just want to spend a few minutes touching on some points that still seem to hold quite a bit of mass confusion among those writing web components that have come up several times in the Skate issues and other places.
 
@@ -429,10 +428,6 @@
         < Another issue I see a lot is when you try and build something like a custom select component and you have children that represent the custom options. Slots work great for projecting content, and there's the `slotchange` event, but that doesn't get fired for the children that are already there when the component is upgraded, and working out exactly what to do when it does change isn't exactly clear. The other side to this is if you have no slots - but still need to act on child content - how do you observe changes to that content? Many of us will immediately turn to mutation observers. Some are scarred from mutation events and will question if that's the right choice. Others won't even know how to do this at all.
 
         < One of the more common questions I get in Skate is how to turn off rendering to a shadow root, which can be for several reasons. One reason is for simpler styling because selectors become fair game, but legitimately, many seemed very concerned about accessibility and web crawlers indexing their content. I don't have a good answer for this, but one thing is for sure: for seamless integration with other frameworks that control child content of you element, you absolutely *must* hide your implementation details from them, so turning off Shadow DOM shouldn't be the answer we give them.
-
-        < The biggest thing, though, is server-side rendering. Now, whatever side of the fence you sit in here, it keeps coming up and most of the concerns relate to shadow DOM. What do search engines do here? I've heard Google crawls the shadow roots, but from looking at the webmaster tools it doesn't seem GoogleBot sees the content in my shadow roots. Bing doesn't seem to either. What happens if there's a JavaScript error? Your site is still accessible and crawlable. I think if there was a solid answer for search engines here, then the other aspects would be easier to swallow.
-
-        < Personally, I don't believe in server-side rendering, but I do believe in solving the problems people are looking at it to solve.
       </vert-slide>
       <vert-slide>
         # Misinformation through rhetoric
