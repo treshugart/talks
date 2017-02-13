@@ -2,6 +2,15 @@
 # yarn lockfile v1
 
 
+"@skatejs/vert@^0.0.0":
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/@skatejs/vert/-/vert-0.0.0.tgz#999118ef28df009b15431317008ce2347d0eeb7c"
+  dependencies:
+    highlight.js "^9.9.0"
+    marked "^0.3.6"
+    page "^1.7.1"
+    skatejs "^4.6.6"
+
 "@webcomponents/custom-elements@https://github.com/webcomponents/custom-elements/archive/36451e1.tar.gz":
   version "1.0.0-alpha.3"
   resolved "https://github.com/webcomponents/custom-elements/archive/36451e1.tar.gz#cd5c86c032a375a5416e00a13e84455c2d716df0"
@@ -81,6 +90,10 @@ is-symbol@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/is-symbol/-/is-symbol-1.0.1.tgz#3cc59f00025194b6ab2e38dbae6689256b660572"
 
+isarray@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
+
 marked@^0.3.6:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.6.tgz#b2c6c618fccece4ef86c4fc6cb8a7cbf5aeda8d7"
@@ -97,9 +110,17 @@ object.assign@^4.0.4:
     function-bind "^1.1.0"
     object-keys "^1.0.10"
 
-raw-loader@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-0.5.1.tgz#0c3d0beaed8a01c966d9787bf778281252a979aa"
+page@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/page/-/page-1.7.1.tgz#3886c147b895487783759b37e800a11213bc38ed"
+  dependencies:
+    path-to-regexp "~1.2.1"
+
+path-to-regexp@~1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-1.2.1.tgz#b33705c140234d873c8721c7b9fd8b541ed3aff9"
+  dependencies:
+    isarray "0.0.1"
 
 skatejs-web-components@^5.1.0:
   version "5.1.0"
