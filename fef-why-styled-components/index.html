@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Eternal Sunshine of the Biased Mind</title>
+    <meta name="description" content="">
+    <style>
+      body {
+        font-family: Helvetica;
+        margin: 0;
+        padding: 0;
+      }
+      vert-deck {
+        height: 100vh;
+        width: 100vw;
+      }
+      vert-deck:not(:defined) {
+        display: none;
+      }
+      vert-slide {
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 40px 20px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <vert-deck focused>
+      <vert-slide>
+        # The eternal sunshine of the biased mind
+
+        [Bias](https://en.wikipedia.org/wiki/Bias) is an inclination or outlook to present or hold a partial perspective, often accompanied by a refusal to consider the possible merits of alternative points of view.
+
+        A [Cognitive bias](https://en.wikipedia.org/wiki/Cognitive_bias) is a repeating or basic misstep in thinking, assessing, recollecting, or other cognitive processes.
+
+        < Hi, I'm' Trey and I'm here to talk to you about bias. By no means am I an export in the field, but I'm' curious about psychology and how it relates to our industry.
+
+        < For the sake of this talk, I'm mostly going to focus on a subset of [cognitive biases](https://en.wikipedia.org/wiki/List_of_cognitive_biases). I'll attempt to relate them our every day jobs and touch on how we can try to mitigate their effects. I will also talk about my experience dealing with my own biases and how it relates to web components, and the struggle web components face, at large, when pitted against the status quo other offerings have set.
+
+        < To start off, let's define "bias".
+        
+        < *read definition of bias*
+
+        < And more specifically...
+
+        < *read definition of cognitive bias*
+      </vert-slide>
+      <vert-slide>
+        # Bias
+
+        Helps with many forms of every day life:
+
+        - Crossing the street
+        - Skimming a blog post
+        - What to eat for dinner
+
+        < We see bias every day: at the grocery store, on TV and in politics. But I'm not going to get into that.
+
+        < Bias is what keeps us from getting run over when we cross the street. It fills in the blanks when we're skimming through a lengthy blog post and don't have time to read every sentence. It even gets us fed.
+      </vert-slide>
+      <vert-slide>
+        # Bias
+
+        But can also hinder:
+
+        - Could actually get you hit by a car you didn't see
+        - Misinterpretting key points in that blog post you skimmed
+        - Getting food poisoning from chicken wings
+
+        < Though biases may offer shortcuts in making quick decisions, you may have made incorrect assumptions about key points in that blog post that was imperative in making a recent decision on your tech stack. You may have gotten food poisining because you mis-read the expiry date on the chicken wings you ate last night.
+
+        < You will never be able to completely remove bias. There's no way you're going to be able to calculate, with 100% accuracy, that crossing the road is safe, though, you might come close. Even if there's no cars, you could trip on a rock in the middle of the road, get knocked out cold and a distracted driver could still run you over. It's unlikely, but still possible.
+      </vert-slide>
+      <vert-slide>
+        # Our bias
+
+        We see it every day:
+
+        - Tabs vs spaces
+        - OOP vs FRP
+        - Typescript vs Flow
+        - Web Components vs ...
+        - vs vs vs!
+
+        < We also see it everyday in our industry.
+
+        < *read out list and on the last one...*
+
+        < It seems like everything is constantly at odds with each other. It's not always that way, but we love our opinions and along with opinions, comes truckloads of bias.
+      </vert-slide>
+      <vert-slide>
+        # Our bias
+
+        > We argue because we feel so emotionally committed to our case, but there is no objectively right answer.
+
+        > &mdash; [Sam Koblenski](http://sam-koblenski.blogspot.com.au/2015/04/programming-bias-comes-from-experience.html)
+
+        < I was reading this article the other day written by a programmer named Sam Koblenski. A couple excerpts from early on in his post caught my eye.
+
+        < *read quote*
+
+        < Most, if not all of us, have argued for, or against something. Many of us do it with passion. I believe this statement to - unfortunately - be true for many arguments.
+      </vert-slide>
+      <vert-slide>
+        # Our bias
+
+        > We argue because we feel so emotionally committed to our case<strike>, but there is no objectively right answer</strike>.
+
+        > &mdash; [Sam Koblenski](http://sam-koblenski.blogspot.com.au/2015/04/programming-bias-comes-from-experience.html)
+
+        < However, if we can try to identify and mitigate our own bias, then we will be more effective in making objective decisions.
+      </vert-slide>
+      <vert-slide>
+        # Our bias
+
+        > That thing that the programmer grew to despise may not have been directly responsible for the failure, but it was there and it was noticed.
+
+        > &mdash; [Sam Koblenski](http://sam-koblenski.blogspot.com.au/2015/04/programming-bias-comes-from-experience.html)
+
+        - [illusory correlation](https://en.wikipedia.org/wiki/Illusory_correlation)
+        - [halo effect](https://en.wikipedia.org/wiki/Bias#Halo_effect)
+        - [belief perseverance](https://en.wikipedia.org/wiki/Confirmation_bias#Persistence_of_discredited_beliefs)
+
+        < Another quote also caught my eye.
+
+        < *read quote*
+
+        < Our biases come from experience. Some baises are correctly linked and some may be the result of an indirect phenomenon, possibly causing an [illusory correlation](https://en.wikipedia.org/wiki/Illusory_correlation), which is when a relationship between variables is perceived, but doesn't actually exist.
+
+        < This quote describes a developer who had a negative experience with something. In a differenct scenario, they could have had a positive experience. When you have a positive experience, you're more likely to have a positive predisposition to whatever you had experienced. Conversely, the same thing can happen with negative experiences. When this occurs, it can be described by the [halo effect](https://en.wikipedia.org/wiki/Bias#Halo_effect) for positives, and the [reverse halo effect](https://en.wikipedia.org/wiki/Halo_effect#Reverse-halo_effect), devil effect or horns effect, for negatives.
+
+        < I'd venture to say the halo effect - and company - plays a major part in how many of us perceive libraries and frameworks.
+
+        < But what happens when you're presented with factual evidence to counter an experience? Your beliefs may persist. It could be for many reasons but the fact that this happens can be described by [belief perseverance](https://en.wikipedia.org/wiki/Confirmation_bias#Persistence_of_discredited_beliefs), or the continued influence effect. Even after a correction has been made, misinformation can continue to influence the inferences one generates. Meaning, you could be presented with facts, accept them, but still continue to make decisions based on your previously incorrect beliefs.
+      </vert-slide>
+      <vert-slide>
+        # Our bias
+
+        [Bias blind spot](https://en.wikipedia.org/wiki/Bias_blind_spot)
+
+        - Recognise bias in others
+        - Failure to recognise your own
+
+        < The ability to recognise the bias of others, but fail to recognise your own is known as the bias blind spot.
+
+        < I've always been interested in psychology and I did quite a bit of studying in preparation for this talk. The research got me very excited and I was constantly trying to pinpoint biases in other arguments right up until I read this definition. It made me take a step back and try to realise that calling out other biases is not how you carry a productive discussion. Instead, I've been trying to recognise my own bias and to use that to help make more objective choices and arguments.
+        
+        < In my opinion, this is probably one of the more important biases to know about because you'll' be more objective if you spend time recognising your own bias as opposed to calling other people out on theirs.
+      </vert-slide>
+      <vert-slide>
+        # Our bias
+
+        ## Nobody is safe!
+
+        < The thing about bias is that nobody is immune to it. Your dog, you, your boss and that thought-leader you idolise; they're all subject to its clutches. Even the most objective people, who are extremely well-versed in a subject, can suffer from what's known as the [curse of knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge). This occurs when an individual, communicating with others, unknowingly assumes that the others have the background to understand what they're talking about.
+      </vert-slide>
+      <vert-slide>
+        # WTF
+
+        > Are we at an amateur psychology conference??
+
+        > &mdash; Maybe you, right now
+
+        - Our story in using web components
+        - How can we be better
+
+        < At this point, you might be asking what the heck this has to do with web components. That's a very good question, and it's one that I'm going to spend the rest of the talk addressing.
+
+        < I'm first going to talk about our story of using web components at Atlassian and the eventual outcome.
+
+        < Lastly, I'll try and call out a few things working for me, that I think we all can try doing to be better people, both in our programming communities and in the world.
+      </vert-slide>
+      <vert-slide>
+        # My bias
+
+        - &hearts;'s web components to the max
+        - Uber vocal WC community member
+        - Author of [SkateJS](https://github.com/skatejs/skatejs)
+        - Uses React every day and also &hearts;'s it, but still prefers web components
+
+        < This is probably a good time to reveal some of my biases, as it will help set the stage for the rest of the talk.
+
+        < I totally dig web components. It's nice to see an essential piece of the platform finally come to fruition.
+
+        < I'm also a very vocal member in the web component community and occasionally the W3C issues. I definitely spout subjectivity on a regular basis but it doesn't mean that I don't try to be objective!
+
+        < I'm the author of SkateJS. For those of you who don't know what it that is, it's similar to React but built on top of Web Components. I urge you to check it out if you haven't already.
+
+        < I also use React on a daily basis and really enjoy it. It's a great tool, and I've obtained an invaluable amount of knowledge from using it. I still have my reasons for preferring web components as a platform, though.
+
+        < I think it's quite common for us to find something we like and stick with it. Using familiar tools helps make us efficient. That's not to say that if we would make the effort to broaden our experience that it wouldn't help us become better programmers, even if the result is that we stick with the same tools.
+      </vert-slide>
+      <vert-slide>
+        # Web Components at Atlassian
+
+        - We were scratching the surface for awhile
+        - New project, clean slate
+        - Goal: cross product components
+
+        < I had originally written Skate in the early days of the web component spec, toward the beginning of 2014. It was in response to some spikes we were doing to try and find a better architecture to start moving our components to. Skate now to Skate in 2014 is black and white; worlds apart. Skate made progress, but we didn't make much progress in fully embracing web components or evangelising it as a team.
+
+        < I've tried to figure out why we never made much progress, but it's hard to pinpoint what caused it. I often think it was due to [analysis paralysis](https://en.wikipedia.org/wiki/Analysis_paralysis) in the sheer amount of problems we had to solve, situations we had to account for and number of stakeholders the project had. The instability of the spec, lack of browser support, and the size and performance issues that plagued the v0 polyfills, compounded that problem.
+
+        < About two years later, we were given a clean slate to work on a new project, similar to our old project, and to put our old project into maintenance mode. The goal was to build UI components to share across our product range, with more focused goals, and an emphasis on dev speed.
+
+        < Along side this, React had been picking up a lot of steam internally. Most products were starting to use it in some way, shape or form. In parallel, Web Components were reaching spec stability and browsers began implementing the most important parts: custom elements and shadow DOM.
+      </vert-slide>
+      <vert-slide>
+        # Web Components at Atlassian
+
+        - Perfect time to move on Web Components
+        - Cross-product, cross-framework
+        - Leverages the platform
+        - Skate is tiiiny (though polyfills are large, they are eventually removed)
+        - No React version coupling
+
+        < It was a pivotal point for us because we could push web components without being held back by our legacy product. It made a lot of sense due to spec stability and impending browser adoption.
+
+        < On top of that, web components offer not only cross-product, but also cross-framework compatibility, due to Shadow DOM hiding the implenentation details from external mutations. And this is imperative for integrating with virtual DOM libraries. This was particularly important to our team because we wanted for anyone to be able to consume our components, not just the parts of products written in React. It was either that or force other parts to be built in React. That's not necessarily a bad thing, but possibly not the best use of time.
+
+        < Being able to leverage the platform means several things. You get specs, native performance and all that built-in behaviour that you don't have to send down the wire to the user.
+
+        < Another big thing for us was not having to move at the speed of the slowest product. Meaning, we'd probably end up having to support the lowest React version in our products while trying to maintian compatibility - or alinging versions - with other products.
+      </vert-slide>
+      <vert-slide>
+        # Web Components at Atlassian
+
+        A [decision matrix](https://en.wikipedia.org/wiki/Decision_matrix) is a method to systematically indentify, analyze, and rate the performance of relationships between sets of values and information.
+
+        <img src="https://i.ytimg.com/vi/W7wTDkBPQRw/maxresdefault.jpg" height="400">
+
+        < Web Components seemed perfect on paper, but we had to justify why we thought they were the best choice for us.
+
+        < We used a decision matrix to do this.
+
+        < *read definition and go over the matrix*
+
+        < We ended up doing a decision matrix for React vs Web Components, and then another one for SkateJS vs Polymer vs X-Tags. Web components won by a modest margin and Skate won, hands down.
+
+        < It's here that you might be thinking, "Aren't you biased towards both of those?'"
+
+        < Indeed I am. However, I was also the one who had the deepest knowledge of Web Components and the supporting libraries. Other people involved in the decision making process helped keep my bias in check by fact-checking information and asking some pretty tough questions along the way.
+      </vert-slide>
+      <vert-slide>
+        # Web Components at Atlassian
+
+        Six months later:
+
+        - Some friction in getting Skate to 1.0
+        - Last minute spec changes cause more major releases
+        - Minor investment, that went mostly as planned
+
+        < Fast-forward a few months. We've built out around 40 web components all written with Skate. There was some learning barriers, but since Skate is a lot like React, it was easier to pick up for devs familiar with React than it would be with something else.
+
+        < This was pre Skate 1.0 and we had anticipated some friction getting it to 1.0, and for the time investment to slow down sometime shortly after that. This part went mostly as expected. There was quite a bit of effort on my part in getting 1.0 across the line and a bit of effort from myself and a couple of other devs bringing it past that.
+
+        < It went from 1.0 to 3.0 fairly quickly as there was some unanticipated changes in the specs and we decided that it'd be best to convey those changes through our versions, even though they might be unlikely to affect a consumer.
+      </vert-slide>
+      <vert-slide>
+        # Web Components at Atlassian
+
+        We didn't anticipate some things:
+
+        - Still maintaining our own Shadow DOM polyfill
+        - Polyfills unstable for longer than expected
+        - Minor bugs when native custom elements released
+        - Safari releasing a broken Shadow DOM implementation
+
+        < I want to start off by saying that I'm really not trying to call anyone out. Browser and polyfill vendors are doing an amazing job at what they do, and I truly appreciate their contributions. Huge respect.
+
+        < One big issue we were still facing is bugs in our own Shadow DOM polyfill that we were maintaining. We started this effor prior to Google building out their v1 polyfill because we needed a solution at the time and we had our reasons for not picking up the v0 polyfills. We had almost a thousand tests that were all passing but when you dropped them into a huge product with a lot of imperative DOM code, parts still broke.
+
+        < We spent some time trying to fix these and decided that we'd try the official polyfills as Google had done a significant amount of work on them since we had started our own. It turns out they didn't improve the situation much, but were moving quicker than we could maintain ours, so we decided to use them instead.
+
+        < Native custom elements posed a couple of trivial bugs with Skate but nothing major. We fixed them and moved on.
+
+        < The biggest issue that we had was when Safari released their v1 Shadow DOM implementation. Our world broke. We had content, but it looked like someone threw in a CSS reset with Times New Roman as the base font. We were doing everything correctly and using style tags in the shadow root, so what could be going wrong?
+
+        < After a bit of debugging, it turned out that if you created and set the content of a style tag imperatively that the styles wouldn't recalc. This isn't an issue if you innerHTML the template to your shadow root, but we were using Incremental DOM - a virtual DOM library - to render our templates to our components and underneath the hood it uses the imperative API.
+
+        < I want to emphasise the fact that an issue was found, and raised, while Safari was still in tech preview and it was still released to stable without a fix in sight until the next update to Mac OS. I get that things happen and sometimes issues slip through the cracks, but this ended up being the straw for us. We were floored; completely helpless.
+
+        < What would have happend, if in another six months down the road, we were flying along in production and Firefox did the same thing. Even though it's a bug in Firefox, the customer is going to come knocking down our door, not Mozilla's. We had to pull the plug.
+
+        < I was beside myself. I had poured my heart and soul into Skate and Web Components, and there was a lot of time invested by other people, but it just wasn't enough. There was nothing we could do. I had to look at this more objectively.
+
+        < *insert them feels wave meme*
+      </vert-slide>
+      <vert-slide>
+        # Web Components at Atlassian
+
+        - Did <a href="https://en.wikipedia.org/wiki/Framing_effect_(psychology)">framing</a> affect either outcome?
+        - Significant amount of time since project start
+        - New information
+        - Criteria changed
+
+        < Looking back, I've had to ask myself: were the outcomes of the matrices framed in a way to make either solution appear a better fit that they actually were?
+
+        < I've talked to others about this and we feel Skate was still the best choice. It gave us fantastic developer ergonomics, and performance, in a really tiny package that exported a raw web component. Though I am undeniably biased, the decision was objectively informed by several parties.
+
+        < Looking back on the Web Component decision is tricky. Over time, we have acquired new information and the criteria had slightly changed. All involved parties agree that we made the most objective decision possible at the time. However, when revisiting the rationale with new information and updated criteria, React won, hands down. So, what went wrong?
+
+        < Weights around stability had become of utmost importance. Hindsight is 20 / 20. Looking back, it's obvous we should have pelanlised web components more for this, but we were confident that polyfills would be more stable and browser implementations further along. I'd say that confirmation bias played a big role in skewing this aspect of the matrix because we were dismissing evidence that could have helped us make a better informed decision.
+        
+        < The way we originally framed the criteria for library weight was biased in favour of web components because we anticipated version coupling to be an issue and you can't have more than one React on the page; web components don't care about this. However, we didn't have any hard evidence that version coupling would cause us any issues. We did have similar issues in the past with jQuery, but those seem to have surfaced because we weren't good about dropping support for older versions as it became prudent to do so. This being the case, we couldn't justify the heavy weighting in this category, so we updated them to assume version coupling, thus React could be deduped and only one would be on the page at any given time. If all products use React in a specific version range, then we would have less page weight than if we had used web components with a supporting library.
+        
+        < Additionally, even though Skate is only a few kilobytes in size, the polyfills would add a very significant amount of weight. And though, Chrome and Safari had both Custom Elements and Shadow DOM by this time, Safari still hadn't released a fix for the Shadow DOM bug. Firefox and Edge had started development, but we had anticipated they'd be further along.
+
+        < As a side note: you could write vanilla components, but there's a strong argument against that due to the sheer amount of code and duplication you'd have to add to the platform. This is an entirely separate topic for another talk.
+      </vert-slide>
+      <vert-slide>
+        # Black clouds
+
+        - Low morale, motivation
+        - Refactor everything to React (40+ components)
+        - Team had limited React experience
+
+        < If we could have a moment of bias, I think we all wanted web components to win; all evidence suggests that they're the right tool for the job and paving new ground with bleeding tech is fun and inspiring.
+
+        < Pragmatism suggested otherwise and I think the objectivity weighed heavily on morale regardless of what is right long-term. It was palpable. What's great about a well-formed team, though, is that despite setbacks, they use the backward momentum to slingshot each other past the obstacles in their way and walk out stronger than they were going in.
+
+        < I'm very lucky to work with such a diverse and intelligent bunch of people. I'm well and truly a better person for having known - and worked with - each and every one of them.
+      </vert-slide>
+      <vert-slide>
+        # Silver linings
+
+        Skate is a lot like React!
+        
+        - Already using JSX
+        - Not using CSS polyfills
+        - Using CSS in JS, so just remove `&lt;style /&gt;` from shadow roots
+        - `&lt;slot /&gt;` -> `this.props.children`
+
+        < Skate ended up being a godsend here.
+        
+        < Even though we didn't have to, we were already using JSX. This made using the existing component structure a breeze. And while some things ended up having to change a little, this made the transition simpler because we didn't need to move everything around.
+
+        < We had thought about trying to use the Shady CSS polyfills just before revisiting the tech stack, but up until that point we were largely using the standard Webpack style loader and CSS modules. In a couple of components we were spiking CSS in JS solutions like [Glamor](https://github.com/threepointone/glamor) and [JSS](https://github.com/cssinjs/jss). Either way, refactoring styles mostly involved removing the `style` tag that we put into our shadow roots because we weren't using any shadow-specific CSS.
+
+        < Though there's a bit more to them, React `children` are a lot like the `&lt;slot /&gt;` element in Shadow DOM. Refactoring here was mostly just renaming `&lt;slot /&gt;` to `this.props.children`.
+      </vert-slide>
+      <vert-slide>
+        # WTF part deux!
+
+        > So, you came to a web component conference to talk about React?
+
+        > &mdash; Maybe you, right now
+
+        < You might be wondering why I'm giving this talk at a web component conference, where you'd expect to see technical talks espousing the benefits of web components as opposed to the caveats and harships.
+
+        < I'm such a web component fanboy it's not even funny, so you can put down the pitchforks. The reason I wanted to do this talk is that there's so much we can learn, and do better at, if we look at past experiences objectively and are empathetic to alternative points of view.
+
+        < This is a more abstract lesson we can apply to most social ideologies, but let's look at it in the conetxt of web components.
+      </vert-slide>
+      <vert-slide>
+        # Past issues
+
+        - Introduced in 2011
+        - Polymer started in 2014
+        - Conflating Polymer and web components
+        - Comparing low-level APIs to libraries
+        - Divergent alternatives
+        - Last minute spec churn
+          - Lifecycle `*Callback` renaming
+            - attached / detached
+            - enteredView / leftView
+            - inserted / removed
+            - connected / disconencted
+          - Other renames
+            - `document.registerElement` to `customElements.define`
+            - `createShadowRoot` to `attachShadow`
+
+        < Web Components were introduced by Alex Russell at Fronteers Conference 2011 for the first time. That's roughly six years ago. In that time a lot has happened. Google released Polymer in 2014, later released 1.0 and are now pushing 2.0. React, Preact, Vue, Choo, Riot, Mithril and probably hundreds more, have all been released and are like web components, but not built on top of the standards. If I could take a guess as to why, I'd say it's close to the same reasons React eventually became the chosen platform for our components.
+
+        < Another issue is that some seemed to conflate Polymer and Web Components. Rather than seeing it as a library built on top of the specs, some thought it was *the* web component implementation. This may have caused some to look the other direction if they didn't like the opinions that Polymer imposed. I don't think this isn't for lack of trying; they clearly explained this at several points in their docs, but there wasn't much else to choose from, and not everyone comprehensively reads docs.
+
+        < One of the biggest reasons I feel web components lost steam is the amount of time it's taken for the specs to reach stability. There's many reasons for this, and I fully understand that some things need to be hashed out, but at the end of the day, we want to build stuff and developers are going to choose what makes them productive, regardless of whether or not it's web components. Personally, I don't care if it's `createShadowRoot()` or `attachShadow()`, I really just want to be able to use Shadow DOM.
+        
+        < Overall, a lot of these changes were necessary, and positive, but I feel the W3C working group for web components needs to take the community, and those who provide feedback, more seriously, and to also learn from what's happening around them in other communities. I fully empathise with the fact that lack of browser agreement in important issues has not helped this process. The lack of compromise on their part has possibly been one of the most impactful problems that has hamstrung web components. We need to try and look at the bigger picture as a whole.
+
+        < As I've stated before, I'm not trying to pick on anyone, or any group, in particular. However, if we don't call these things out, how can we ever improve? Realising shortcomings isn't easy, and it's something that even the best of us struggle with, but we can only become better if we know what to improve on.
+      </vert-slide>
+      <vert-slide>
+        # The future is bright
+
+        - Cross-framework components
+        - Longevity
+        - Performance
+        - Productivity
+
+        < Though it's been a slog, we're almost there. The future is indeed bright and there's many benefits that we can, and should, count on.
+
+        < "Framework agnostic UI components" has always been the elevator pitch but this is only scratching the surface. Instead of realying on Polymer or Skate to provide abstractions, what if you could use a Vue component inside of a React component just by writing HTML? With tree-shaking, size becomes less of an issue. If you build on top of the platform and embrace the constraints - which means "just write HTML" etc - this is entirely possible. The politics of this is more complicated, because it's harder to lock developers in to your framework as a platform, but we need to start realising that the web is more than just the number of stars you have on Github.
+
+        < Longevity - For as much shade as I threw toward the spec earlier, it's probably the largest contributor to the web being the most democratic, popular, long-lived and stable platform that we have ever had the privilege to build on top of. And let's face it, we are privileged.
+
+        < Performance - When you register a custom element, you're handing off so many things that you'd have to do at the framework or library level. In doing this, your element lifecycle is closer to the metal and as a by-product, we don't have to reinvent that. Which leads me to my next point.
+
+        < Productivity - If we're not reinventing the core component lifecycle and optimising things that the browser already does well, we can spend time on other things, like actually building components. We can even build abstractions on top of the platform and feedback the relevant parts to the spec.
+      </vert-slide>
+      <vert-slide>
+        # Amost there...
+
+        ...but there's still lots of confusion
+
+        - Styling
+        - Integrating CSS frameworks
+        - Handling changes to children
+        - When to use shadow DOM, when not to
+        - Server-side rendering
+
+        < I just want to spend a few minutes touching on some points that still seem to hold quite a bit of mass confusion among those writing web components that have come up several times in the Skate issues and other places.
+
+        < Developers still seem fairly confused in the best way to style components. A quesiton I've heard many ask is "isn't it going to be slow if I render one style tag for every component?".
+
+        < There is no straightforward way to integrate existing CSS frameworks like Foundation or Bootstrap. The best solution I could find is to include the parts you need, but there's a lot of friction in doing that, and sometimes you end up including most of it anyways. The most robust method is to include the whole thing in every style tag. Going back to the previous question, isn't that bad?
+
+        < Another issue I see a lot is when you try and build something like a custom select component and you have children that represent the custom options. Slots work great for projecting content, and there's the `slotchange` event, but that doesn't get fired for the children that are already there when the component is upgraded, and working out exactly what to do when it does change isn't exactly clear. The other side to this is if you have no slots - but still need to act on child content - how do you observe changes to that content? Many of us will immediately turn to mutation observers. Some are scarred from mutation events and will question if that's the right choice. Others won't even know how to do this at all.
+
+        < One of the more common questions I get in Skate is how to turn off rendering to a shadow root, which can be for several reasons. One reason is for simpler styling because selectors become fair game, but legitimately, many seemed very concerned about accessibility and web crawlers indexing their content. I don't have a good answer for this, but one thing is for sure: for seamless integration with other frameworks that control child content of you element, you absolutely *must* hide your implementation details from them, so turning off Shadow DOM shouldn't be the answer we give them.
+
+        < The biggest thing, though, is server-side rendering. Now, whatever side of the fence you sit in here, it keeps coming up and most of the concerns relate to shadow DOM. What do search engines do here? I've heard Google crawls the shadow roots, but from looking at the webmaster tools it doesn't seem GoogleBot sees the content in my shadow roots. Bing doesn't seem to either. What happens if there's a JavaScript error? Your site is still accessible and crawlable. I think if there was a solid answer for search engines here, then the other aspects would be easier to swallow.
+
+        < Personally, I don't believe in server-side rendering, but I do believe in solving the problems people are looking at it to solve.
+      </vert-slide>
+      <vert-slide>
+        # Misinformation through rhetoric
+        
+        - Divides communities
+        - http://www.backalleycoder.com/2016/08/26/demythstifying-web-components/
+
+        < Many of the arguments I've seen against web components employs some form of pitting them against a farmework or library. Comparing a low-level API to several levels of abstraction is apples to oranges. Regardless of whether or not it was done intentionally to frame web components as inferior, we need to ensure that we properly educate the masses.
+
+        < I've seen several high-profile people in other framework communities spreading misinformation about Web Components. Many of these have been addressed in a great post that Daniel Buchner wrote, so I won't go into it, but it's necessary to point out that this is a struggle that web components has, and will continue to struggle with for some time.
+      </vert-slide>
+      <vert-slide>
+        # The moral of the story?
+
+        - Recognise your own bias
+        - Stop throwing punches
+        - Realise the bigger picture
+        - Educate
+
+        < Though it's impossible to do 100%, try and remove your bias because it will make decisions more object and dicsussions more productive because it allows you to empathise with alternative points of view.
+
+        < Despite the allegiances that we hold, we need to take a step back and focus on the bigger picture. It's not about the popularity of a framework, but about making the web a better place for everyone.
+
+        < And last, the best way to overcome the problems that our communities face, is through education and objective discussion. Let's solve problems *together*.
+      </vert-slide>
+      <vert-slide>
+        # About me
+
+        Trey Shugart, Principal Dev @ Atlassian, creator of [SkateJS](https://github.com/skatejs/skatejs)
+
+        - Github: https://github.com/treshugart
+        - Twitter: https://twitter.com/treshugart (@treshugart)
+        - Slides: https://github.com/treshugart/talks/packages/eternal-sunshine-of-the-biased-mind
+        - Slides created using: https://github.com/skatejs/vert/blob/master/packages/deck
+
+        < Thank you!
+      </vert-slide>
+    </vert-deck>
+    <script src="../dist/talks.min.js"></script>
+  </body>
+</html>
