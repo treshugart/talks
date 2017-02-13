@@ -9,13 +9,15 @@
     "umd"
   ],
   "scripts": {
-    "build": "nwb build-web-module && rm -rf lib && mv umd dist",
+    "build": "rm -rf dist && nwb build-web-module && rm -rf lib && mv umd dist",
     "clean": "nwb clean-module",
     "test": "nwb test",
     "test:coverage": "nwb test --coverage",
     "test:watch": "nwb test --server"
   },
   "dependencies": {
+    "@skatejs/vert": "^0.0.0",
+    "skatejs-web-components": "^5.1.0"
   },
   "devDependencies": {
     "nwb": "0.15.x"
