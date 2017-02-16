@@ -3057,12 +3057,24 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_skatejs__["define"])((_temp2 =
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.css = '\n    :host {\n      display: block;\n      text-align: center;\n    }\n    .img {\n      display: inline-block;\n    }\n  ', _temp), _possibleConstructorReturn(_this, _ret);
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.css = '\n    :host {\n      display: block;\n      text-align: center;\n    }\n    .img {\n      display: inline-block;\n    }\n  ', _this.handleRef = function (e) {
+      var _this2 = _this,
+          height = _this2.height,
+          width = _this2.width;
+
+      if (height) {
+        e.setAttribute('height', height);
+      }
+      if (width) {
+        e.setAttribute('width', width);
+      }
+    }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
   _class.prototype.renderCallback = function renderCallback(_ref) {
     var alt = _ref.alt,
         css = _ref.css,
+        handleRef = _ref.handleRef,
         src = _ref.src,
         title = _ref.title;
 
@@ -3070,14 +3082,22 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_skatejs__["define"])((_temp2 =
       'style',
       null,
       css
-    ), __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_skatejs__["h"])('img', { 'class': 'img', alt: alt || title, src: src, title: title || alt })];
+    ), __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_skatejs__["h"])('img', {
+      alt: alt || title,
+      'class': 'img',
+      src: src,
+      title: title || alt,
+      ref: handleRef
+    })];
   };
 
   return _class;
 }(__WEBPACK_IMPORTED_MODULE_2_skatejs__["Component"]), _class.is = 'talk-img', _class.props = {
   alt: __WEBPACK_IMPORTED_MODULE_2_skatejs__["prop"].string({ attribute: true }),
+  height: __WEBPACK_IMPORTED_MODULE_2_skatejs__["prop"].string({ attribute: true }),
   src: __WEBPACK_IMPORTED_MODULE_2_skatejs__["prop"].string({ attribute: true }),
-  title: __WEBPACK_IMPORTED_MODULE_2_skatejs__["prop"].string({ attribute: true })
+  title: __WEBPACK_IMPORTED_MODULE_2_skatejs__["prop"].string({ attribute: true }),
+  width: __WEBPACK_IMPORTED_MODULE_2_skatejs__["prop"].string({ attribute: true })
 }, _temp2));
 
 /***/ }),
@@ -23077,7 +23097,7 @@ function getAnimation(i, actualSelected, forward) {
   var num = i + 1;
   var isCurr = num === actualSelected;
   if (isCurr) {
-    return 'fadeIn slide' + (forward ? 'InRight' : 'InLeft');
+    return 'fadeIn fadeOut slide' + (forward ? 'InRight' : 'InLeft');
   }
   return 'fadeOut';
 }
@@ -23196,7 +23216,7 @@ function getAnimation(i, actualSelected, forward) {
   }, {
     key: 'style',
     get: function get() {
-      return '\n      ' + __WEBPACK_IMPORTED_MODULE_2__css_loader_animate_css___default.a + '\n\n      :host {\n        display: flex;\n        flex-direction: column;\n        overflow-x: hidden;\n      }\n\n      .container {\n        box-sizing: border-box;\n        flex: 1;\n        outline: none;\n        padding-top: 5px;\n      }\n\n      .slide {\n        animation-duration: var(--vert-deck-slide-animation-duration, .3s);\n        display: block;\n        position: relative;\n        z-index: 1;\n      }\n      .slides {\n        margin: var(--vert-deck-slide-margin, auto);\n        max-width: var(--vert-deck-slide-width, 800px);\n        padding: var(--vert-deck-slide-padding, 0);\n        position: relative;\n      }\n\n      .fadeOut {\n        position: absolute;\n        top: 0;\n        transition: top var(--vert-deck-slide-animation-duration, .3s);\n        width: 100%;\n        z-index: 0;\n      }\n\n      .speaker {\n        margin: 20px;\n      }\n\n      .time,\n      .timer {\n        display: inline-block;\n        font-size: 1.5rem;\n      }\n      .time {\n        float: right;\n      }\n    ';
+      return '\n      ' + __WEBPACK_IMPORTED_MODULE_2__css_loader_animate_css___default.a + '\n\n      :host {\n        display: flex;\n        flex-direction: column;\n        font-size: 1.4rem;\n        overflow-x: hidden;\n      }\n\n      .container {\n        box-sizing: border-box;\n        flex: 1;\n        outline: none;\n        padding-top: 5px;\n      }\n\n      .slide {\n        animation-duration: var(--vert-deck-slide-animation-duration, .3s);\n        display: block;\n        position: relative;\n        z-index: 1;\n      }\n      .slides {\n        margin: var(--vert-deck-slide-margin, auto);\n        max-width: var(--vert-deck-slide-width, 800px);\n        padding: var(--vert-deck-slide-padding, 0);\n        position: relative;\n      }\n\n      .fadeOut {\n        position: absolute;\n        top: 0;\n        width: 100%;\n        z-index: 0;\n      }\n\n      .speaker {\n        margin: 20px;\n      }\n\n      .time,\n      .timer {\n        display: inline-block;\n        font-size: 1.5rem;\n      }\n      .time {\n        float: right;\n      }\n    ';
     }
   }]);
 
