@@ -6,5 +6,11 @@ module.exports = {
       global: 'talks',
       externals: {}
     }
+  },
+  babel: {
+    plugins: [
+      'transform-flow-strip-types',
+      ['transform-react-jsx', { pragma: 'h' }]
+    ]
   }
 }

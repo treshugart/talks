@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@skatejs/vert": "^0.0.0",
+    "skatejs": "^4.6.6",
     "skatejs-web-components": "^5.1.0"
   },
   "devDependencies": {
