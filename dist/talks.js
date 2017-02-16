@@ -2859,7 +2859,7 @@ module.exports = function() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__markdown__ = __webpack_require__(2);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var _class, _temp2;
+var _class, _temp;
 
 function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
@@ -2898,19 +2898,13 @@ function parseNotesFromMarkdown(markdown) {
   });
 }
 
-/* harmony default export */ __webpack_exports__["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_skatejs__["define"])((_temp2 = _class = function (_ChildrenChanged) {
+/* harmony default export */ __webpack_exports__["a"] = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_skatejs__["define"])((_temp = _class = function (_ChildrenChanged) {
   _inherits(_class, _ChildrenChanged);
 
   function _class() {
-    var _temp, _this, _ret;
-
     _classCallCheck(this, _class);
 
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _ChildrenChanged.call.apply(_ChildrenChanged, [this].concat(args))), _this), _this.css = '\n    h1 {\n      margin-top: -10px;\n    }\n  ', _temp), _possibleConstructorReturn(_this, _ret);
+    return _possibleConstructorReturn(this, _ChildrenChanged.apply(this, arguments));
   }
 
   _class.prototype.childrenChangedCallback = function childrenChangedCallback() {
@@ -2924,15 +2918,16 @@ function parseNotesFromMarkdown(markdown) {
 
   _class.prototype.renderCallback = function renderCallback(_ref) {
     var content = _ref.content,
-        css = _ref.css;
+        markdownCss = _ref.markdownCss;
 
-    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_skatejs__["h"])(__WEBPACK_IMPORTED_MODULE_2__markdown__["a" /* Markdown */], { css: css }, content);
+    return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_skatejs__["h"])(__WEBPACK_IMPORTED_MODULE_2__markdown__["a" /* Markdown */], { css: markdownCss }, content);
   };
 
   return _class;
 }(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0____["c" /* ChildrenChanged */])(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0____["a" /* ComponentNext */])())), _class.is = 'vert-slide', _class.props = {
-  content: __WEBPACK_IMPORTED_MODULE_1_skatejs__["prop"].string()
-}, _temp2));
+  content: __WEBPACK_IMPORTED_MODULE_1_skatejs__["prop"].string(),
+  markdownCss: __WEBPACK_IMPORTED_MODULE_1_skatejs__["prop"].string()
+}, _temp));
 
 /***/ }),
 /* 5 */
@@ -23169,6 +23164,7 @@ function getAnimation(i, actualSelected, forward) {
         id = _ref3.id,
         mouseX = _ref3.mouseX,
         mouseY = _ref3.mouseY,
+        slideMarkdownCss = _ref3.slideMarkdownCss,
         slides = _ref3.slides,
         speaker = _ref3.speaker,
         win = _ref3.win;
@@ -23194,9 +23190,13 @@ function getAnimation(i, actualSelected, forward) {
       }
     }, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_skatejs__["h"])(__WEBPACK_IMPORTED_MODULE_3__store__["a" /* Store */], { id: id, name: 'currentSlide', value: actualSelected }), ifSpeaker(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_skatejs__["h"])('div', { 'class': 'speaker' }, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_skatejs__["h"])(__WEBPACK_IMPORTED_MODULE_8__timer__["a" /* default */], { 'class': 'timer' }), __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_skatejs__["h"])(__WEBPACK_IMPORTED_MODULE_7__time__["a" /* default */], { 'class': 'time', slides: slides }), __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_skatejs__["h"])('div', null, actualSelected, ' / ', slides.length), __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_skatejs__["h"])(__WEBPACK_IMPORTED_MODULE_4__notes__["a" /* default */], { 'class': 'notes', notes: notes }))), ifNotSpeaker(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_skatejs__["h"])('div', { 'class': 'slides' }, this.slides.map(function (s, i) {
       var animation = getAnimation(i, actualSelected, _forward);
-      return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_skatejs__["h"])(__WEBPACK_IMPORTED_MODULE_6__slide__["a" /* default */], { 'class': 'slide animated ' + animation, ref: function ref(e) {
+      return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_skatejs__["h"])(__WEBPACK_IMPORTED_MODULE_6__slide__["a" /* default */], {
+        'class': 'slide animated ' + animation,
+        markdownCss: slideMarkdownCss,
+        ref: function ref(e) {
           return e.innerHTML = s.innerHTML;
-        } });
+        }
+      });
     }))))];
   };
 
@@ -23228,6 +23228,7 @@ function getAnimation(i, actualSelected, forward) {
   id: __WEBPACK_IMPORTED_MODULE_1_skatejs__["prop"].string({ attribute: true }),
   speaker: __WEBPACK_IMPORTED_MODULE_1_skatejs__["prop"].boolean({ attribute: true }),
   selected: __WEBPACK_IMPORTED_MODULE_1_skatejs__["prop"].number({ attribute: true }),
+  slideMarkdownCss: __WEBPACK_IMPORTED_MODULE_1_skatejs__["prop"].string({ attribute: true }),
   slides: __WEBPACK_IMPORTED_MODULE_1_skatejs__["prop"].array(),
   win: __WEBPACK_IMPORTED_MODULE_1_skatejs__["prop"].boolean({ attribute: true })
 }, _temp2));
