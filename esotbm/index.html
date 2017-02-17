@@ -402,7 +402,7 @@
 
         < Looking back on the Web Component decision is tricky. Over time, we acquired new information and the criteria changed slightly. All involved parties agree that we made the most objective decision possible at the time. However, when revisiting the rationale with new information and updated criteria, React won by a wider margin than web components the first time. So, what went wrong?
 
-        < Decision matrices can provide a false sensitivity of objectivity. Weights around stability had become of utmost importance. Hindsight is 20 / 20. Looking back, it's obvous we should have pelanlised web components more for this, but we were confident that polyfills would be more stable and browser implementations further along. I'd say that confirmation bias played a big role in skewing this aspect of the matrix because we were dismissing evidence that could have helped us make a better informed decision.
+        < Decision matrices can provide a false sense of objectivity. Weights around stability had become of utmost importance. Hindsight is 20 / 20. Looking back, it's obvous we should have pelanlised web components more for this, but we were confident that polyfills would be more stable and browser implementations further along. I'd say that confirmation bias played a big role in skewing this aspect of the matrix because we were dismissing evidence that could have helped us make a better informed decision.
         
         < The way we originally framed the criteria for library weight was biased in favour of web components because we anticipated version coupling to be an issue and you can't have more than one React on the page; web components don't care about this. However, we didn't have any hard evidence that version coupling would cause us any issues. We did have similar issues in the past with jQuery, but those seem to have surfaced because we weren't good about dropping support for older versions as it became prudent to do so. This being the case, we couldn't justify the heavy weighting in this category, so we updated them to assume version coupling, thus React could be deduped and only one would be on the page at any given time. If all products use React in a specific version range, then we would have less page weight than if we had used web components with a supporting library.
         
@@ -426,7 +426,7 @@
 
         <talk-img src="img/calvin-and-hobbes.jpg"></talk-img>
 
-        < what's great about a well-formed team is they pick each other back up and dust each other off. You end up better off then before you fell.
+        < What's great about a well-formed team is they pick each other back up and dust each other off. You end up better off than before you fell.
 
         < I'm very lucky to work with such a diverse and intelligent bunch of people. I'm well and truly a better person because of them.
       </vert-slide>
@@ -461,7 +461,7 @@
 
         < I'm such a web component fanboy it's not even funny, so you can put down the pitchforks. The reason I wanted to do this talk is that there's so much we can learn, and do better at, if we look at past experiences objectively and are empathetic to alternative points of view.
 
-        < This is a more abstract lesson we can apply to most social ideologies, but let's look at it in the context of web components.
+        < This is a more abstract lesson we can apply to most social and political ideologies, but let's look at it in the context of web components.
       </vert-slide>
       <vert-slide>
         # Past issues
@@ -486,7 +486,7 @@
 
         < One of the biggest reasons I feel web components lost steam is the amount of time it's taken for the specs to reach stability. There's many reasons for this, and I fully understand that some things need to be hashed out, but at the end of the day, we want to build stuff and developers are going to choose what makes them productive, regardless of whether or not it's web components. Personally, I don't care if it's `createShadowRoot()` or `attachShadow()`, I really just want to be able to use Shadow DOM.
         
-        < Overall, a lot of these changes were necessary, and positive, but I feel the W3C working group for web components needs to take the community, and those who provide feedback, more seriously, and to also learn from what's happening around them in other communities. I fully empathise with the fact that lack of browser agreement in important issues has not helped this process. The lack of compromise on their part has possibly been one of the most impactful problems that has hamstrung web components. We need to try and look at the bigger picture as a whole.
+        < Overall, a lot of these changes were necessary, and positive, but I feel the W3C working group for web components needs to take the community, and those who provide feedback, more seriously, and to also learn from what's happening around them in other communities. I fully empathise with the fact that lack of browser agreement in important issues has not helped this process. The lack of compromise on their part has possibly been one of the most impactful problems that has hamstrung web components. We need to try and look at the bigger picture as a whole, rather than encapsulating ourselves into a bubble.
 
         < As I've stated before, I'm not trying to pick on anyone, or any group, in particular. However, if we don't call these things out, how can we ever improve? Realising shortcomings isn't easy, and it's something that even the best of us struggle with, but we can only become better if we know what to improve on.
       </vert-slide>
@@ -506,7 +506,7 @@
 
         < Performance &mdash; When you register a custom element, you're handing off so many things that you'd have to do at the framework or library level. In doing this, your element lifecycle is closer to the metal and as a by-product, we don't have to reinvent that. Which leads me to my next point.
 
-        < Productivity &mdash; If we're not reinventing the core component lifecycle and optimising things that the browser already does well, we can spend time on other things, like actually building components. We can even build abstractions &mdash; like Skate and Polymer &mdash; on top of the platform and feedback the relevant parts to the spec.
+        < Productivity &mdash; If we're not reinventing the core component lifecycle and optimising things that the browser already does well, we can spend time on other things, like actually building components. We can even build abstractions &mdash; like Skate and Polymer &mdash; on top of the platform and feedback the relevant parts to the spec, iteratively making the web a better platform over time.
       </vert-slide>
       <vert-slide>
         # Amost there...
@@ -515,7 +515,7 @@
 
         <talk-img src="img/no-idea.jpg"></talk-img>
 
-        < Web Components are *almost* there, but it seems there's still a bit of confusion. A number of questions and issues in Skate and other forms have popped up that I'd like to run through.
+        < Web Components are *almost* there, but it seems there's still a bit of confusion. A number of questions and issues in Skate and other forums have popped up that I'd like to run through.
       </vert-slide>
       <vert-slide>
         # Style tags
@@ -524,7 +524,7 @@
         - Performance?
         - Best practices?
 
-        < Developers still seem fairly confused in the best way to style components. A quesiton I've heard many ask is "isn't it going to be slow if I render one style tag for every component?". I haven't experienced this first hand, and I remember Rob Dodson saying something about how browsers will ooptimise this internally, but it seems that there's no official stance on the best practices around this.
+        < Developers still seem fairly confused in the best way to style components. A quesiton I've heard many ask is "isn't it going to be slow if I render one style tag for every component?" I haven't experienced this first hand, and I remember Rob Dodson saying something about how browsers will optimise this internally, but it still seems that there's no official stance on the best practices around this.
       </vert-slide>
       <vert-slide>
         # Using CSS frameworks
@@ -564,7 +564,7 @@
         - Values don't serialise
         - Submit buttons don't work
 
-        < A shortcoming we've experienced first-hand, is when building custom form elements. If you put a form element inside of a shadow root, the value never gets serialised when the parent form is submitted. Additionally, submit buttons in a shadow root don't cause the form to submit when the're clicked. There's proposals for solving this, but nothing concrete has been worked out yet. Luckily, there's workarounds, but it means rebuilding that behaviour.
+        < A shortcoming we've experienced first-hand, is when building custom form elements. If you put a form element inside of a shadow root, the value never gets serialised when the parent form is submitted. Additionally, submit buttons in a shadow root don't cause the form to submit when they're clicked. There's proposals for solving this, but nothing concrete has been worked out yet. Luckily, there's workarounds, but it means rebuilding that behaviour.
       </vert-slide>
       <vert-slide>
         # Misinformation through rhetoric
@@ -588,9 +588,9 @@
 
         < Though it's impossible to do 100%, we need to try and remove our biases because it will help make decisions more objective and dicsussions more productive. Empathy is a very useful tool.
 
-        < Despite the allegiances that we hold, we need to take a step back and focus on the bigger picture. It's not about being he winner of a popularity contest, but about making the web a better place for everyone.
+        < Despite the allegiances that we hold, we need to take a step back and focus on the bigger picture. It's not about being the winner of a popularity contest, but about making the web a better place for everyone.
 
-        < And last, the best way to overcome the problems that our communities face, is through education and objective discussion.
+        < And last, the best way to overcome the problems that our communities face, is through education, objectivity and empathy.
         
         < **Let's solve problems *together*.**
       </vert-slide>
