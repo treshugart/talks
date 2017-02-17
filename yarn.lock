@@ -18,10 +18,11 @@
     memory-fs "^0.3.0"
     resolve "^1.2.0"
 
-"@skatejs/vert@^0.0.0":
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/@skatejs/vert/-/vert-0.0.0.tgz#999118ef28df009b15431317008ce2347d0eeb7c"
+"@skatejs/vert@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@skatejs/vert/-/vert-0.1.0.tgz#96e015d6703410375766720d2521672826671647"
   dependencies:
+    animate.css "^3.5.2"
     highlight.js "^9.9.0"
     marked "^0.3.6"
     page "^1.7.1"
@@ -90,6 +91,10 @@ alphanum-sort@^1.0.1, alphanum-sort@^1.0.2:
 amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
+
+animate.css@^3.5.2:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/animate.css/-/animate.css-3.5.2.tgz#91e668dc069a808e5e499514867b97aae0166c36"
 
 ansi-escapes@^1.1.0:
   version "1.4.0"
