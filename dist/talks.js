@@ -26288,6 +26288,8 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_skatejs__["define"])((_temp = 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_skatejs__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_skatejs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_skatejs__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _class, _temp2;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26310,7 +26312,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_skatejs__["define"])((_temp2 =
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.css = '\n    :host {\n      display: block;\n      text-align: center;\n    }\n    .img {\n      display: inline-block;\n    }\n  ', _this.handleRef = function (e) {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.handleRef = function (e) {
       var _this2 = _this,
           height = _this2.height,
           width = _this2.width;
@@ -26344,9 +26346,21 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_skatejs__["define"])((_temp2 =
     })];
   };
 
+  _createClass(_class, [{
+    key: 'css',
+    get: function get() {
+      var avatar = this.avatar,
+          height = this.height,
+          width = this.width;
+
+      return '\n      :host {\n        display: block;\n        text-align: center;\n      }\n      .img {\n        display: inline-block;\n        border-radius: ' + (avatar ? height || width : '0') + 'px;\n      }\n    ';
+    }
+  }]);
+
   return _class;
 }(__WEBPACK_IMPORTED_MODULE_0_skatejs__["Component"]), _class.is = 'talk-img', _class.props = {
   alt: __WEBPACK_IMPORTED_MODULE_0_skatejs__["prop"].string({ attribute: true }),
+  avatar: __WEBPACK_IMPORTED_MODULE_0_skatejs__["prop"].boolean({ attribute: true }),
   height: __WEBPACK_IMPORTED_MODULE_0_skatejs__["prop"].string({ attribute: true }),
   src: __WEBPACK_IMPORTED_MODULE_0_skatejs__["prop"].string({ attribute: true }),
   title: __WEBPACK_IMPORTED_MODULE_0_skatejs__["prop"].string({ attribute: true }),

@@ -81,11 +81,11 @@
 
         - Could get hit by an unseen car
         - Misinterpretting key points in a blog post
-        - Mis-reading food expiry label
+        - Misreading food expiry label
 
         < Though biases may offer shortcuts in making quick decisions, you may have made incorrect assumptions about key points in that blog post that was imperative in making a recent decision on your tech stack. You may have gotten food poisining because you mis-read the expiry date on the chicken wings you ate last night.
 
-        < You will never be able to completely remove bias. There's no way you're going to be able to calculate, with 100% accuracy, that crossing the road is safe, though, you might come close. Even if there's no cars, you could trip on a rock in the middle of the road, get knocked out cold and a distracted driver could still run you over. It's unlikely, but still entirely possible.
+        < You will never be able to completely remove bias. Though, bias gets a bad rap, it's the reason we can make quick decisions. Without it, you'd have to make precise calculations about every little thing you do, every time you do it.
       </vert-slide>
       <vert-slide>
         # Our bias
@@ -201,7 +201,7 @@
 
         [Choice-supportive bias](https://en.wikipedia.org/wiki/Choice-supportive_bias)
 
-        Downplaying faults, or highlighting advantages, of past decisions.
+        Downplaying faults, or highlighting advantages, of past decisions. Inversely applicable to unmade decisions.
 
         <talk-img src="img/xkcd-natural-parenting.png"></talk-img>
 
@@ -362,6 +362,8 @@
         - Minor bugs when native custom elements released
         - Safari releasing a broken Shadow DOM implementation
 
+        <talk-img src="img/this-is-fine.gif"></talk-img>
+
         < I want to start off by saying that I'm really not trying to call anyone out. Browser and polyfill vendors are doing an amazing job at what they do, and I truly appreciate their contributions. Huge respect.
 
         < One big issue we were still facing is bugs in our own Shadow DOM polyfill that we were maintaining. We started this effor prior to Google building out their v1 polyfill because we needed a solution at the time and we had our reasons for not picking up the v0 polyfills. We had almost a thousand tests that were all passing but when you dropped them into a huge product with a lot of imperative DOM code, parts still broke.
@@ -417,7 +419,14 @@
 
         < If we could have a moment of bias, I think we all wanted web components to win; all evidence suggests that they're the right tool for the job and paving new ground with bleeding tech is fun and inspiring.
 
-        < Pragmatism suggested otherwise and I think the objectivity weighed heavily on morale regardless of what is right long-term. It was palpable. But what's great about a well-formed team is they pick each other back up and dust each other off. You end up better off then before you fell.
+        < Pragmatism suggested otherwise and I think the objectivity weighed heavily on morale regardless of what is right long-term. It was palpable.
+      </vert-slide>
+      <vert-slide>
+        # Silver linings
+
+        <talk-img src="img/calvin-and-hobbes.jpg"></talk-img>
+
+        < what's great about a well-formed team is they pick each other back up and dust each other off. You end up better off then before you fell.
 
         < I'm very lucky to work with such a diverse and intelligent bunch of people. I'm well and truly a better person because of them.
       </vert-slide>
@@ -429,7 +438,9 @@
         - Already using JSX
         - Not using CSS polyfills
         - Using CSS in JS, so just remove `&lt;style /&gt;` from shadow roots
-        - `&lt;slot /&gt;` -> `this.props.children`
+        - Replace `&lt;slot&gt;` with `this.props.children`
+
+        <talk-img src="img/self-five.gif"></talk-img>
 
         < Skate ended up being a godsend here.
         
@@ -500,25 +511,60 @@
       <vert-slide>
         # Amost there...
 
-        ...but there's still lots of confusion
+        ...but there's still some confusion.
 
-        - Styling
-        - Integrating CSS frameworks ([info](https://github.com/skatejs/skatejs/issues/984))
-        - Handling changes to children ([info](https://github.com/skatejs/skatejs/issues/995))
-        - When to use shadow DOM, when not to
-        - Forms inside of a shadow root ([issue](https://github.com/w3c/webcomponents/issues/187), [workaround](https://skatejs.gitbooks.io/skatejs/content/docs/recipes/form-behaviour-and-the-shadow-dom.html))
+        <talk-img src="img/no-idea.jpg"></talk-img>
 
-        < I just want to spend a few minutes touching on some points that still seem to hold quite a bit of mass confusion among those writing web components that have come up several times in the Skate issues and other places.
+        < Web Components are *almost* there, but it seems there's still a bit of confusion. A number of questions and issues in Skate and other forms have popped up that I'd like to run through.
+      </vert-slide>
+      <vert-slide>
+        # Style tags
 
-        < Developers still seem fairly confused in the best way to style components. A quesiton I've heard many ask is "isn't it going to be slow if I render one style tag for every component?".
+        - One style tag per component.
+        - Performance?
+        - Best practices?
 
-        < There is no straightforward way to integrate existing CSS frameworks like Foundation or Bootstrap. The best solution I could find is to include the parts you need, but there's a lot of friction in doing that, and sometimes you end up including most of it anyways. The most robust method is to include the whole thing in every style tag. Going back to the previous question, isn't that bad?
+        < Developers still seem fairly confused in the best way to style components. A quesiton I've heard many ask is "isn't it going to be slow if I render one style tag for every component?". I haven't experienced this first hand, and I remember Rob Dodson saying something about how browsers will ooptimise this internally, but it seems that there's no official stance on the best practices around this.
+      </vert-slide>
+      <vert-slide>
+        # Using CSS frameworks
+
+        Integrating CSS frameworks ([info](https://github.com/skatejs/skatejs/issues/984))
+
+        - Include piecemeal? How?
+        - Include whole library in every `&lt;style&gt;` tag?
+
+        < There is no straight-forward way to integrate existing CSS frameworks like Foundation or Bootstrap. The best solution I could find is to include the parts you need, but there's a lot of friction in doing that, and sometimes you end up including most of it anyways. The most robust method is to include the whole thing in every style tag. Going back to the previous question, isn't that bad?
+      </vert-slide>
+      <vert-slide>
+        # Children
+
+        Handling changes to children ([info](https://github.com/skatejs/skatejs/issues/995))
+
+        - `slotchange`, but doesn't fire initially
+        - Mutation observer
+        - Performance
 
         < Another issue I see a lot is when you try and build something like a custom select component and you have children that represent the custom options. Slots work great for projecting content, and there's the `slotchange` event, but that doesn't get fired for the children that are already there when the component is upgraded, and working out exactly what to do when it does change isn't exactly clear. The other side to this is if you have no slots &mdash; but still need to act on child content &mdash; how do you observe changes to that content? Many of us will immediately turn to mutation observers. Some are scarred from mutation events and will question if that's the right choice. Others won't even know how to do this at all.
+      </vert-slide>
+      <vert-slide>
+        # Shadow DOM use
+
+        - Is Shadow DOM meant to be used all the time?
+        - Styling friction compared to status quo
+        - A11y / SEO
+        - Required for cross-framework compat
 
         < One of the more common questions I get in Skate is how to turn off rendering to a shadow root, which can be for several reasons. One reason is for simpler styling because selectors become fair game, but legitimately, many seemed very concerned about accessibility and web crawlers indexing their content. I don't have a good answer for this, but one thing is for sure: for seamless integration with other frameworks that control child content of you element, you absolutely *must* hide your implementation details from them, so turning off Shadow DOM shouldn't be the answer we give them.
+      </vert-slide>
+      <vert-slide>
+        # Forms (Shadow DOM con't)
 
-        < A shortcoming we've encountered is when building custom form elements. If you put a form element inside of a shadow root, the value never gets serialised when the parent form is submitted. There's proposals for solving this, but nothing concrete has been worked out yet. Luckily, there's workarounds, but it means rebuilding that behaviour.
+        - Form fields in a shadow root ([issue](https://github.com/w3c/webcomponents/issues/187), [workaround](https://skatejs.gitbooks.io/skatejs/content/docs/recipes/form-behaviour-and-the-shadow-dom.html))
+        - Values don't serialise
+        - Submit buttons don't work
+
+        < A shortcoming we've experienced first-hand, is when building custom form elements. If you put a form element inside of a shadow root, the value never gets serialised when the parent form is submitted. Additionally, submit buttons in a shadow root don't cause the form to submit when the're clicked. There's proposals for solving this, but nothing concrete has been worked out yet. Luckily, there's workarounds, but it means rebuilding that behaviour.
       </vert-slide>
       <vert-slide>
         # Misinformation through rhetoric
@@ -551,12 +597,13 @@
       <vert-slide>
         # About me
 
+        <talk-img avatar src="img/me.jpg" height="120"></talk-img>
+
         Trey Shugart, Principal Dev @ Atlassian, creator of [SkateJS](https://github.com/skatejs/skatejs)
 
         - Github: https://github.com/treshugart
-        - Twitter: https://twitter.com/treshugart (@treshugart)
-        - Slides: https://github.com/treshugart/talks/packages/eternal-sunshine-of-the-biased-mind
-        - Slides created using: https://github.com/skatejs/vert/blob/master/packages/deck
+        - Twitter: https://twitter.com/treshugart
+        - Slides created using: https://github.com/skatejs/vert
 
         < Thank you!
       </vert-slide>
