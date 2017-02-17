@@ -29,13 +29,20 @@
       <vert-slide>
         # The eternal sunshine of the biased mind
 
-        [Bias](https://en.wikipedia.org/wiki/Bias) is an inclination to hold a partial perspective, often accompanied by a refusal to consider alternative points of view.
-
-        A [Cognitive bias](https://en.wikipedia.org/wiki/Cognitive_bias) is a shortcut in thinking that can often lead to errors in judgement.
+        <p style="text-align: center">https://treshugart.github.io/talks/esotbm</p>
 
         < Hi, I'm' Trey. I'm going to talk to you a little bit about bias. I'm definitely not an expert in the field, but I'm curious about psychology, and how it affects the choices and decisions people make in our industry.
 
+        < If you want to check out some of the links or follow along, you can go to the URL shown here.
+
         < For the first part of this talk, I'm going to focus on some forms of cognitive bias and touch on how bias relates to our industry, and every day lives, which will help give context to the rest of the talk.
+      </vert-slide>
+      <vert-slide>
+        # Bias
+
+        [Bias](https://en.wikipedia.org/wiki/Bias) is an inclination to hold a partial perspective, often accompanied by a refusal to consider alternative points of view.
+
+        A [Cognitive bias](https://en.wikipedia.org/wiki/Cognitive_bias) is a shortcut in thinking that can sometimes lead to errors in judgement.
 
         < To start off, let's define "bias".
         
@@ -128,10 +135,10 @@
 
         > &mdash; [Sam Koblenski](http://sam-koblenski.blogspot.com.au/2015/04/programming-bias-comes-from-experience.html)
 
-        - [Illusory correlation](https://en.wikipedia.org/wiki/Illusory_correlation)
-        - [Halo effect](https://en.wikipedia.org/wiki/Bias#Halo_effect)
-        - [Belief perseverance](https://en.wikipedia.org/wiki/Confirmation_bias#Persistence_of_discredited_beliefs)
-        - <a href="https://en.wikipedia.org/wiki/Conservatism_(belief_revision)">Conservitism</a>
+        - [Illusory correlation](https://en.wikipedia.org/wiki/Illusory_correlation) - when a relationship between two things is perceived, but doesn't actually exist.
+        - [Halo effect](https://en.wikipedia.org/wiki/Bias#Halo_effect) - when a positive experience toward something predisposes you to think more positively about whatever it was you experienced.
+        - [Belief perseverance](https://en.wikipedia.org/wiki/Confirmation_bias#Persistence_of_discredited_beliefs) - when beliefs persist even after facts are presented to counter them.
+        - <a href="https://en.wikipedia.org/wiki/Conservatism_(belief_revision)">Conservitism</a> - when the effort to revise your beliefs based on fact is insufficient.
 
         < Another quote also caught my eye.
 
@@ -170,6 +177,8 @@
 
         When you search for information that supports your point of view.
 
+        <talk-img src="img/xkcd-conspiracy-theories.png" height="500"></talk-img>
+
         < I'm just going to quickly go through some other types of bias before moving on.
 
         < Probably one of the more well-known types of cognitive biases is confirmation bias. For example, since I support web components, I am more likely to search for &mdash; and interpret &mdash; information about web components in a way that supports my pre-existing beliefs.
@@ -180,6 +189,8 @@
         [Bandwagon effect](https://en.wikipedia.org/wiki/Bandwagon_effect)
 
         When the adoption rate of something increases the more attention it gets.
+
+        <talk-img src="img/xkcd-bridge.png"></talk-img>
 
         < The bandwagon effect is when the adoption rate of something increases the more it is adopted by others. This is basically Github stars in a nutshell.
         
@@ -192,6 +203,8 @@
 
         Downplaying faults, or highlighting advantages, of past decisions.
 
+        <talk-img src="img/xkcd-natural-parenting.png"></talk-img>
+
         < The choice supportive bias is an interesting one. When looking back on a choice, it's when you downplay the faults &mdash; or highlight the advantages &mdash; of the option you chose, while possibly doing the inverse for the option you didn't choose.
         
         < You might sometimes say, "well, look at the bright side" as to downplay the negative effects of a choice. The less you do this, the more you will be able to learn from your past experiences.
@@ -203,6 +216,8 @@
 
         Overestimating, or underestimating, your abilities relative to others.
 
+        <talk-img src="img/xkcd-the-bdlpswdks-effect.png" height="500"></talk-img>
+
         < I heard about the Dunning-Kruger effect long before I knew what it was. It's basically every Facebook comment thread. Anything you can put "armchair" before describes one aspect of this, which is when you overestimate your own abilities in relation to others. The other aspect of this is when you underestimate yourself in the same way, which is very similar to imposter syndrome.
       </vert-slide>
       <vert-slide>
@@ -211,6 +226,8 @@
         [Illusory truth effect](https://en.wikipedia.org/wiki/Illusory_truth_effect)
 
         The tendency to believe information to be correct after repeated exposure.
+
+        <talk-img src="img/xkcd-jet-fuel.png" height="500"></talk-img>
 
         < The last one I want to call out is the illusory truth effect because this is how misinformation spreads. It's very prevalent in contemporary politics, but also very much alive in our industry. You may have heard the expression: "the DOM is slow", or that it's "too bloated". This is a result of it being asserted many times without clear context around it.
       </vert-slide>
@@ -224,6 +241,8 @@
         - Thought leaders
         - Teachers and mentors ([curse of knowledge](https://en.wikipedia.org/wiki/Curse_of_knowledge))
 
+        <talk-img src="img/xkcd-duty-calls.png" height="300"></talk-img>
+
         < The thing about bias is that nobody is immune to it. Your dog, you, your boss and that thought-leader you idolise; they're all subject to it. Even this talk!
         
         < The most objective people, who are extremely well-versed in a subject, can suffer from a bias that's called the curse of knowledge which is when a someone, communicating with others, unknowingly assumes that they have the background to understand the subject matter.
@@ -235,7 +254,7 @@
 
         > &mdash; Maybe you, right now
 
-        - Web components at Atlassian, or is it?
+        - Web components at Atlassian, or are they?
         - How can we be better
 
         < At this point, you might be asking what the heck this has to do with web components. That's a very good question, and it's one that I'm going to spend the rest of the talk addressing.
@@ -470,7 +489,7 @@
 
         < Though it's been a slog, we're almost there. The future is indeed bright and there's many benefits that we can, and should, count on.
 
-        < "Framework agnostic UI components" has always been the elevator pitch but this is only scratching the surface. Instead of realying on Polymer or Skate to provide abstractions, what if you could use a Vue component inside of a React component just by writing HTML? With tree-shaking, size becomes less of an issue. If you build on top of the platform and embrace the constraints &mdash; which means "just write HTML" etc &mdash; this is entirely possible. The politics of this is more complicated, because it's harder to lock developers in to your framework as a platform, but we need to start realising that the web is more than just the number of stars you have on Github.
+        < "Framework agnostic UI components" has always been the elevator pitch but this is only scratching the surface. Instead of realying on Polymer or Skate to provide abstractions, what if you could use a Vue component inside of a React component just by writing HTML? Or vice-versa? With tree-shaking, size becomes less of an issue. If you build on top of the platform and embrace the constraints &mdash; which means "just write HTML" etc &mdash; this is entirely possible. The politics of this is more complicated, because it's harder to lock developers in to your framework as a platform, but we need to start realising that the web is more than just the number of stars you have on Github.
 
         < Longevity &mdash; For as much shade as I threw toward the spec earlier, it's probably the largest contributor to the web being the most democratic, popular, long-lived and stable platform that we have ever had the privilege to build on top of. And let's face it, we're pretty privileged if we can change lifecycle callback names four times.
 
