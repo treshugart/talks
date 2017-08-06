@@ -1,23 +1,31 @@
-<meta name="msvalidate.01" content="23E87E1F97820E7430B04FEE9EAA46E8" />
-<script src="https://unpkg.com/@webcomponents/webcomponentsjs@1.0.5"></script>
-<script>
-  function App() {
-    return HTMLElement.call(this);
-  }
-  App.prototype = Object.create(HTMLElement.prototype);
-  App.prototype.constructor = App;
-  App.prototype.connectedCallback = function () {
-    if (!this.shadowRoot) {
-      this
-        .attachShadow({ mode: 'open' })
-        .innerHTML = '<h1>It works!</h1><p>Woot!</p>';
+<html>
+
+<head>
+  <meta name="msvalidate.01" content="23E87E1F97820E7430B04FEE9EAA46E8" />
+</head>
+
+<body>
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@1.0.5"></script>
+  <script>
+    function App() {
+      return HTMLElement.call(this);
     }
-  };
-  customElements.define('x-app', App);
+    App.prototype = Object.create(HTMLElement.prototype);
+    App.prototype.constructor = App;
+    App.prototype.connectedCallback = function () {
+      if (!this.shadowRoot) {
+        this
+          .attachShadow({ mode: 'open' })
+          .innerHTML = '<h1>It works!</h1><p>Woot!</p>';
+      }
+    };
+    customElements.define('x-app', App);
+  </script>
+  <x-app>No worky :(</x-app>
 
-</script>
-<x-app>No worky :(</x-app>
+  <my-app>
+    Only this is crawlable without JS
+  </my-app>
+</body>
 
-<my-app>
-  Only this is crawlable without JS
-</my-app>
+</html>
