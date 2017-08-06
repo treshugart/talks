@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <title>Polymer Summit talk test</title>
+</head>
+
+<body>
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@1.0.5"></script>
+  <script>
+    class App extends HTMLElement {
+      connectedCallback() {
+        if (!this.shadowRoot) {
+          this
+            .attachShadow({ mode: 'open' })
+            .innerHTML = '<h1>It works!</h1><p>Woot!</p>';
+        }
+      }
+    }
+    customElements.define('x-app', App);
+  </script>
+  <x-app>No worky :(</x-app>
+</body>
+
+</html>
