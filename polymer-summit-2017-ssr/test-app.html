@@ -1,15 +1,4 @@
-<script>
-  window.addEventListener('error', function (e) {
-    document.body.innerHTML = [
-      'Message: ' + e.message,
-      'URL: ' + e.name,
-      'Line: ' + e.lineno,
-      'Column: ' + e.colno,
-      'Stack: ' + (e.error && e.error.stack || '(no stack trace)')
-    ].join('<br>');
-  });
-
-</script>
+<meta name="msvalidate.01" content="23E87E1F97820E7430B04FEE9EAA46E8" />
 <script src="https://unpkg.com/@webcomponents/webcomponentsjs@1.0.5"></script>
 <script>
   function App() {
@@ -28,3 +17,7 @@
 
 </script>
 <x-app>No worky :(</x-app>
+
+<my-app>
+  Only this is crawlable without JS
+</my-app>
