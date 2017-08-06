@@ -1,3 +1,15 @@
+<script>
+  window.addEventListener('error', function (e) {
+    document.body.innerHTML = [
+      'Message: ' + e.message,
+      'URL: ' + e.name,
+      'Line: ' + e.lineno,
+      'Column: ' + e.colno,
+      'Stack: ' + (e.error && e.error.stack || '(no stack trace)')
+    ].join('\n');
+  });
+
+</script>
 <script src="https://unpkg.com/@webcomponents/webcomponentsjs@1.0.5"></script>
 <script src="https://unpkg.com/@webcomponents/webcomponentsjs@1.0.5/custom-elements-es5-adapter.js"></script>
 <script>
