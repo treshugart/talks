@@ -11,7 +11,6 @@
 
 </script>
 <script src="https://unpkg.com/@webcomponents/webcomponentsjs@1.0.5"></script>
-<script src="https://unpkg.com/@webcomponents/webcomponentsjs@1.0.5/custom-elements-es5-adapter.js"></script>
 <script>
   function App() {
     HTMLElement.call(this);
@@ -21,12 +20,9 @@
     if (!this.shadowRoot) {
       this
         .attachShadow({ mode: 'open' })
-        .innerHTML = this.renderCallback();
+        .innerHTML = '<h1>It works!</h1><p>Woot!</p>';
     }
   };
-  App.prototype.renderCallback = function () {
-    return '<h1>It works!</h1><p>Woot!</p>';
-  }
   customElements.define('x-app', App);
 
 </script>
