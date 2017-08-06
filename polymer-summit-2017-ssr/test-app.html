@@ -5,7 +5,7 @@
     HTMLElement.call(this);
   }
   App.prototype = Object.create(HTMLElement.prototype);
-  App.prototype.connectedCallback = connectedCallback = function () {
+  App.prototype.connectedCallback = function () {
     if (!this.shadowRoot) {
       this
         .attachShadow({ mode: 'open' })
@@ -13,7 +13,7 @@
     }
   };
   App.prototype.renderCallback = function () {
-    return `<h1>It works!</h1><p>Woot!</p>`;
+    return '<h1>It works!</h1><p>Woot!</p>';
   }
   customElements.define('x-app', App);
 
