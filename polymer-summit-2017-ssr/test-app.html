@@ -12,10 +12,10 @@
 </script>
 <script src="https://unpkg.com/@webcomponents/webcomponentsjs@1.0.5"></script>
 <script>
-  // function App() {
-  //   HTMLElement.call(this);
-  // }
-  // App.prototype = Object.create(HTMLElement.prototype);
+  function App() {
+    HTMLElement.call(this);
+  }
+  App.prototype = Object.create(HTMLElement.prototype);
   // App.prototype.connectedCallback = function () {
   //   if (!this.shadowRoot) {
   //     this
@@ -23,7 +23,7 @@
   //       .innerHTML = '<h1>It works!</h1><p>Woot!</p>';
   //   }
   // };
-  // customElements.define('x-app', App);
+  customElements.define('x-app', App);
 
 </script>
 <x-app>No worky :(</x-app>
